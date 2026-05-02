@@ -3,6 +3,7 @@ import { API } from '../../views/Home/DkpsTable/DkpsTable.service'
 import './Login.css'
 import { useNavigate } from 'react-router'
 import { objectPost } from '../../helpers/objetPost'
+import { MdVisibility, MdVisibilityOff } from 'react-icons/md'
 // import { useDispatch } from 'react-redux'
 
 const Login = ({ setShowAddDkp }) => {
@@ -10,6 +11,7 @@ const Login = ({ setShowAddDkp }) => {
     user: '',
     password: ''
   })
+  const [showPassword, setShowPassword] = useState(false)
   const navigate = useNavigate()
   // const dispatch = useDispatch()
 
@@ -40,15 +42,37 @@ const Login = ({ setShowAddDkp }) => {
   return (
     <div className='login'>
       <form className='login-form' onSubmit={onSubmitForm}>
+        <h2>Iniciar Sesión</h2>
         <div className='login-input'>
-          <label htmlFor=''>User:</label>
-          <input id='user' type='text' onChange={handleOnChange} />
+          <label htmlFor='user'>User:</label>
+          <input
+            id='user'
+            type='text'
+            onChange={handleOnChange}
+            placeholder='Introduce tu usuario'
+          />
         </div>
         <div className='login-input'>
-          <label htmlFor=''>Password:</label>
-          <input id='password' type='password' onChange={handleOnChange} />
+          <label htmlFor='password'>Password:</label>
+          <div className='password-wrapper'>
+            <input
+              id='password'
+              type={showPassword ? 'text' : 'password'}
+              onChange={handleOnChange}
+              placeholder='Introduce tu contraseña'
+            />
+            <button
+              type='button'
+              className='password-toggle'
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? <MdVisibilityOff /> : <MdVisibility />}
+            </button>
+          </div>
         </div>
-        <button type='submit'>Login</button>
+        <button type='submit' className='login-submit'>
+          Login
+        </button>
       </form>
     </div>
   )

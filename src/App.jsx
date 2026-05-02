@@ -6,6 +6,8 @@ import Login from './components/Login/Login'
 import { useState } from 'react'
 import Register from './components/Register/Register'
 import ItemBis from './views/ItemsBis/ItemsBis'
+import Rules from './views/Rules/Rules'
+import LootTable from './views/LootTable/LootTable'
 import Footer from './components/Footer/Footer'
 
 const App = () => {
@@ -14,7 +16,7 @@ const App = () => {
   console.log(pathname)
   return (
     <div className='App flex flex-col min-h-screen'>
-      {pathname !== '/login' && pathname !== '/register' && <NavBar />}
+      {pathname !== '/register' && <NavBar />}
       <main className='flex-1'>
         <Routes>
           <Route path='/' element={<Home showAddDKP={showAddDKP} />} />
@@ -30,6 +32,8 @@ const App = () => {
             path='/itembis/*'
             element={<ItemBis setShowAddDkp={setShowAddDkp} />}
           />
+          <Route path='/rules' element={<Rules />} />
+          <Route path='/loottable' element={<LootTable />} />
         </Routes>
       </main>
       {pathname !== '/login' && pathname !== '/register' && <Footer />}

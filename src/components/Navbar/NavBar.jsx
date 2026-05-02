@@ -1,6 +1,7 @@
-import { GiReaperScythe, GiHamburgerMenu } from 'react-icons/gi'
+import { GiHamburgerMenu } from 'react-icons/gi'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { FaRegMoon } from "react-icons/fa6"
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -12,12 +13,12 @@ const NavBar = () => {
     <header className='fixed top-0 z-50 flex w-full items-center justify-center border-b border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-sm dark:bg-background-dark/80 sm:px-10'>
       <div className='flex w-full max-w-7xl items-center justify-between'>
         {/* Logo and Guild Name */}
-        <Link to={'/'} className='flex items-center gap-4 text-white'>
+        <Link to={'/'} className='flex items-center gap-2 text-white'>
           <div className='size-6'>
-            <GiReaperScythe size={24} />
+            <FaRegMoon size={24} color='#a855f7' />
           </div>
-          <h2 className='text-lg font-bold leading-tight tracking-[-0.015em] text-white'>
-            &lt;Lunatik&gt;
+          <h2 className='text-lg font-bold leading-tight tracking-[-0.015em] text-[#a855f7]'>
+            Lunatik
           </h2>
         </Link>
 
@@ -27,14 +28,26 @@ const NavBar = () => {
             to='/'
             className='text-sm font-medium leading-normal text-white/80 hover:text-white'
           >
-            DKP
+            HOME
           </Link>
           <Link
+            to='/rules'
+            className='text-sm font-medium leading-normal text-white/80 hover:text-white'
+          >
+            REGLAS
+          </Link>
+          <Link
+            to='/loottable'
+            className='text-sm font-medium leading-normal text-white/80 hover:text-white'
+          >
+            LOOT
+          </Link>
+          {/* <Link
             to='/itembis'
             className='text-sm font-medium leading-normal text-white/80 hover:text-white'
           >
             BiS Lists
-          </Link>
+          </Link> */}
         </div>
 
         {/* Right side: Login + Hamburger */}
@@ -68,6 +81,20 @@ const NavBar = () => {
               className='text-sm font-medium leading-normal text-white/80 hover:text-white py-2'
             >
               DKP
+            </Link>
+            <Link
+              to='/rules'
+              onClick={closeMenu}
+              className='text-sm font-medium leading-normal text-white/80 hover:text-white py-2'
+            >
+              REGLAS
+            </Link>
+            <Link
+              to='/loottable'
+              onClick={closeMenu}
+              className='text-sm font-medium leading-normal text-white/80 hover:text-white py-2'
+            >
+              LOOT
             </Link>
             <Link
               to='/itembis'

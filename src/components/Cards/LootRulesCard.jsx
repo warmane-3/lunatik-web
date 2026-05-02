@@ -1,10 +1,11 @@
 import { memo } from 'react'
 import { MdOutlineGavel } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 const LootRulesCard = memo(() => {
   return (
     <div
-      className='flex flex-col rounded-xl border border-border-color bg-surface-dark p-6'
+      className='flex flex-col rounded-xl border border-border-color bg-surface-dark/60 p-6 backdrop-blur-md'
       id='rules'
     >
       <div className='flex items-center gap-3 mb-4'>
@@ -24,6 +25,7 @@ const LootRulesCard = memo(() => {
         </li>
         <li>Los nuevos reclutas reciben DKP de bienvenida.</li>
       </ul>
+      <Link to='/rules'>Ver más</Link>
     </div>
   )
 })

@@ -1,5 +1,6 @@
-import { memo, useCallback } from 'react'
+import { memo } from 'react'
 import { MdMilitaryTech } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 const BiSListsCard = memo(() => {
   const classColors = [
@@ -15,14 +16,9 @@ const BiSListsCard = memo(() => {
     { name: 'Druid', colorHex: '#FF7D0A' }
   ]
 
-  const handleClassClick = useCallback((className) => {
-    // TODO: Navigate to BiS page for this class
-    console.log(`BiS Lists for ${className}`)
-  }, [])
-
   return (
     <div
-      className='flex flex-col rounded-xl border border-border-color bg-surface-dark p-6'
+      className='flex flex-col rounded-xl border border-border-color bg-surface-dark/60 p-6 backdrop-blur-md'
       id='bis'
     >
       <div className='flex items-center gap-3 mb-4'>
@@ -39,14 +35,16 @@ const BiSListsCard = memo(() => {
       </p>
       <div className='grid grid-cols-3 gap-3 sm:grid-cols-4'>
         {classColors.map((classItem) => (
-          <button
+          <Link
+            to={`https://discord.com/channels/1467869124943413351/1467869126109434069`}
+            target='_blank'
             key={classItem.name}
-            onClick={() => handleClassClick(classItem.name)}
+            // onClick={() => handleClassClick(classItem.name)}
             className='flex items-center justify-center rounded-lg bg-surface-darker p-3 text-sm font-semibold transition-all hover:opacity-80'
             style={{ color: classItem.colorHex }}
           >
             {classItem.name}
-          </button>
+          </Link>
         ))}
       </div>
     </div>

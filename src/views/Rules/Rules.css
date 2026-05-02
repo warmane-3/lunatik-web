@@ -1,0 +1,207 @@
+.Rules-container {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 100px; /* Space for navbar */
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.Rules-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Hero Section */
+.rules-hero {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 60px 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.rules-hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  color: #a855f7;
+  margin-bottom: 20px;
+  letter-spacing: 4px;
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+.hero-text {
+  font-size: 1.2rem;
+  color: #f8fafc;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.hermandad-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(168, 85, 247, 0.2);
+  border: 1px solid #a855f7;
+  border-radius: 30px;
+  color: #a855f7;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+/* Sections */
+.rules-section {
+  width: 100%;
+}
+
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  color: #f8fafc;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.3);
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Ranks Grid */
+.ranks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.rank-card {
+  background: rgba(15, 23, 42, 0.5);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.rank-card:hover {
+  transform: translateY(-5px);
+  background: rgba(15, 23, 42, 0.8);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+.rank-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.rank-icon {
+  font-size: 1.5rem;
+}
+
+.rank-card h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.rank-card p {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* Behavior and Discord Grid */
+.rules-grid-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.behavior-rules, .discord-rules, .vision-container {
+  background: rgba(15, 23, 42, 0.5);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.rule-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.channels-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.channels-tags span {
+  background: rgba(34, 211, 238, 0.1);
+  color: #22d3ee;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(34, 211, 238, 0.3);
+}
+
+/* Vision */
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.vision-item {
+  text-align: center;
+  padding: 20px;
+  background: rgba(2, 6, 23, 0.4);
+  border-radius: 12px;
+}
+
+.vision-item h4 {
+  color: #f8fafc;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.vision-item p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.footer-quote {
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #a855f7;
+  margin-top: 20px;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .rules-grid-two {
+    grid-template-columns: 1fr;
+  }
+  
+  .vision-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .rules-hero {
+    padding: 40px 20px;
+  }
+  
+  .Rules-container {
+    padding-top: 80px;
+  }
+}

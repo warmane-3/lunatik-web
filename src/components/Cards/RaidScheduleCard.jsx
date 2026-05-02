@@ -4,7 +4,7 @@ import { MdCalendarMonth } from 'react-icons/md'
 const RaidScheduleCard = memo(() => {
   return (
     <div
-      className='flex flex-col rounded-xl border border-border-color bg-surface-dark p-6'
+      className='flex flex-col rounded-xl border border-border-color bg-surface-dark/60 p-6 backdrop-blur-md'
       id='schedule'
     >
       <div className='flex items-center gap-3 mb-4'>
