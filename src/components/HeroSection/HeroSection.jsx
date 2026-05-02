@@ -28,7 +28,7 @@ const HeroSection = memo(() => {
             </h1>
             <h2 className='text-sm font-normal leading-normal text-white/80 @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal'>
               Conquistadores de la Ciudadela de la Corona de Hielo. ¡Por la
-              Alianza! - Servidor Warmane
+              Horda! - Servidor Warmane
             </h2>
           </div>
           <button

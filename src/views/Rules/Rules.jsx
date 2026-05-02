@@ -82,7 +82,7 @@ const Rules = memo(() => {
             Bajo la luz de la luna nacieron los LUNATIK: guerreros que no temen al caos ni a la noche.
             Nuestra fuerza no viene solo del equipo o del daño… sino de la unión, la disciplina y el deseo de mejorar juntos.
           </p>
-          <div className='hermandad-badge'>Hermandad • Alianza • Warmane</div>
+          <div className='hermandad-badge'>Hermandad • Horda • Warmane</div>
         </section>
 
         {/* Estructura de Rangos */}
