@@ -18,15 +18,22 @@ const RaidScheduleCard = memo(() => {
       </div>
       <div className='space-y-4 text-text-secondary'>
         <div>
-          <h4 className='font-semibold text-white'>Icecrown Citadel 25 H/N</h4>
-          <p>Viernes &amp; Sabado</p>
+          <h4 className='font-semibold text-[#a955f7]'>Icecrown Citadel 25 HC/NM</h4>
+          <p>Jueves, Viernes, Sabado, Domingo y Martes</p>
           <p>01:00 AM - 04:00 AM (Server Time)</p>
         </div>
         <div>
-          <h4 className='font-semibold text-white'>
-            Trial of the Crusader 25 H/N
+          <h4 className='font-semibold text-[#a955f7]'>
+            The Ruby Sanctum 25 HC/NM
           </h4>
           <p>Miercoles</p>
+          <p>01:00 AM - 04:00 AM (Server Time)</p>
+        </div>
+        <div>
+          <h4 className='font-semibold text-[#a955f7]'>
+            Ulduar 25 HM/NM
+          </h4>
+          <p>Lunes</p>
           <p>01:00 AM - 04:00 AM (Server Time)</p>
         </div>
       </div>

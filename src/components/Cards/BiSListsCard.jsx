@@ -36,8 +36,7 @@ const BiSListsCard = memo(() => {
       <div className='grid grid-cols-3 gap-3 sm:grid-cols-4'>
         {classColors.map((classItem) => (
           <Link
-            to={`https://discord.com/channels/1467869124943413351/1467869126109434069`}
-            target='_blank'
+            to={`/loottable`}
             key={classItem.name}
             // onClick={() => handleClassClick(classItem.name)}
             className='flex items-center justify-center rounded-lg bg-surface-darker p-3 text-sm font-semibold transition-all hover:opacity-80'

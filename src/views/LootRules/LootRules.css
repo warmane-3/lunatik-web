@@ -1,0 +1,250 @@
+.LootRules-container {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.LootRules-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Header */
+.lootr-header {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 50px 30px;
+  border-radius: 24px;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.lootr-header h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: #a855f7;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.lootr-header .subtitle {
+  font-size: 1.1rem;
+  color: #f8fafc;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  line-height: 1.6;
+}
+
+.raid-badges {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.raid-badges span {
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid #a855f7;
+  color: #a855f7;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.dkp-cap {
+  font-size: 0.95rem;
+  color: #94a3b8;
+}
+
+/* Grids */
+.lootr-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+}
+
+.lootr-grid-three {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+/* Cards */
+.lootr-card {
+  background: rgba(15, 23, 42, 0.5);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  color: #f8fafc;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 12px;
+}
+
+/* Gains List */
+.gains-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.gain-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: rgba(2, 6, 23, 0.3);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.gain-name {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.gain-values {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.gain-val {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.gain-extra {
+  font-size: 0.7rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Roles Grid */
+.roles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.role-card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: rgba(2, 6, 23, 0.3);
+  border-radius: 12px;
+  border-left: 4px solid;
+  gap: 15px;
+}
+
+.role-icon {
+  font-size: 1.4rem;
+}
+
+.role-name {
+  flex-grow: 1;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.role-val {
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+/* Penalty List */
+.penalty-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.penalty-item {
+  padding-left: 12px;
+  border-left: 2px solid rgba(239, 68, 68, 0.3);
+}
+
+.penalty-name {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.penalty-val {
+  color: #ef4444;
+  font-weight: 800;
+}
+
+.penalty-desc {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Performance List */
+.perf-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.perf-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Rules Summary */
+.rules-summary-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.rules-summary-list li {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .lootr-grid-three {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .lootr-grid, .lootr-grid-three {
+    grid-template-columns: 1fr;
+  }
+  
+  .lootr-header {
+    padding: 30px 20px;
+  }
+  
+  .LootRules-container {
+    padding-top: 80px;
+  }
+}

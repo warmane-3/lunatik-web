@@ -30,24 +30,25 @@ const NavBar = () => {
           >
             HOME
           </Link>
-          <Link
-            to='/rules'
-            className='text-sm font-medium leading-normal text-white/80 hover:text-white'
-          >
-            REGLAS
-          </Link>
+          
           <Link
             to='/loottable'
             className='text-sm font-medium leading-normal text-white/80 hover:text-white'
           >
-            LOOT
+            LOOT LIST
           </Link>
-          {/* <Link
-            to='/itembis'
+          <Link
+            to='/lootrules'
             className='text-sm font-medium leading-normal text-white/80 hover:text-white'
           >
-            BiS Lists
-          </Link> */}
+            SISTEMA DKP
+          </Link>
+          <Link
+            to='/rules'
+            className='text-sm font-medium leading-normal text-white/80 hover:text-white'
+          >
+            RANGOS Y REGLAS
+          </Link>
         </div>
 
         {/* Right side: Login + Hamburger */}
@@ -80,7 +81,7 @@ const NavBar = () => {
               onClick={closeMenu}
               className='text-sm font-medium leading-normal text-white/80 hover:text-white py-2'
             >
-              DKP
+              HOME
             </Link>
             <Link
               to='/rules'
@@ -97,11 +98,11 @@ const NavBar = () => {
               LOOT
             </Link>
             <Link
-              to='/itembis'
+              to='/lootrules'
               onClick={closeMenu}
               className='text-sm font-medium leading-normal text-white/80 hover:text-white py-2'
             >
-              BiS Lists
+              SISTEMA DKP
             </Link>
           </div>
         </div>

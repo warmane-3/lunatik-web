@@ -1,4 +1,4 @@
-import { memo, useState, useMemo } from 'react'
+import { memo, useState, useMemo, useEffect, useRef } from 'react'
 import lootData from '../../../data/item_bis.json'
 import {
   FaSkull,
@@ -7,9 +7,74 @@ import {
   FaLayerGroup,
   FaSearch,
   FaFilter,
-  FaTimes
+  FaTimes,
+  FaChevronDown
 } from 'react-icons/fa'
 import './LootTable.css'
+
+// Custom Dropdown Component
+const CustomDropdown = ({
+  icon,
+  label,
+  options,
+  value,
+  onChange,
+  formatLabel
+}) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const dropdownRef = useRef(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
+  const handleSelect = (val) => {
+    onChange(val)
+    setIsOpen(false)
+  }
+
+  const selectedOptionLabel = value === 'ALL' ? label : formatLabel(value)
+
+  return (
+    <div className='custom-dropdown' ref={dropdownRef}>
+      <button
+        className={`dropdown-trigger ${isOpen ? 'active' : ''} ${value !== 'ALL' ? 'has-value' : ''}`}
+        onClick={() => setIsOpen(!isOpen)}
+        type='button'
+      >
+        <span className='trigger-icon'>{icon}</span>
+        <span className='trigger-label truncate'>{selectedOptionLabel}</span>
+        <FaChevronDown className={`chevron-icon ${isOpen ? 'rotate' : ''}`} />
+      </button>
+
+      {isOpen && (
+        <div className='dropdown-menu backdrop-blur-xl'>
+          <div
+            className={`dropdown-item ${value === 'ALL' ? 'selected' : ''}`}
+            onClick={() => handleSelect('ALL')}
+          >
+            {label}
+          </div>
+          {options.map((opt) => (
+            <div
+              key={opt}
+              className={`dropdown-item ${value === opt ? 'selected' : ''}`}
+              onClick={() => handleSelect(opt)}
+            >
+              {formatLabel(opt)}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
 
 const LootTable = memo(() => {
   const [selectedRaid, setSelectedRaid] = useState(lootData[0].raid)
@@ -156,53 +221,32 @@ const LootTable = memo(() => {
               />
             </div>
 
-            <div className='filter-group'>
-              <FaSkull className='filter-icon' />
-              <select
-                className='rounded-md'
-                value={selectedBoss}
-                onChange={(e) => setSelectedBoss(e.target.value)}
-              >
-                <option value='ALL'>Todos los Bosses</option>
-                {filterOptions.bosses.map((b) => (
-                  <option key={b} value={b}>
-                    {formatName(b)}
-                  </option>
-                ))}
-              </select>
-            </div>
+            <CustomDropdown
+              icon={<FaSkull />}
+              label='Todos los Bosses'
+              options={filterOptions.bosses}
+              value={selectedBoss}
+              onChange={setSelectedBoss}
+              formatLabel={formatName}
+            />
 
-            <div className='filter-group'>
-              <FaFilter className='filter-icon' />
-              <select
-                className='rounded-md'
-                value={selectedClass}
-                onChange={(e) => setSelectedClass(e.target.value)}
-              >
-                <option value='ALL'>Todas las Clases</option>
-                {filterOptions.classes.map((c) => (
-                  <option key={c} value={c}>
-                    {formatName(c)}
-                  </option>
-                ))}
-              </select>
-            </div>
+            <CustomDropdown
+              icon={<FaFilter />}
+              label='Todas las Clases'
+              options={filterOptions.classes}
+              value={selectedClass}
+              onChange={setSelectedClass}
+              formatLabel={formatName}
+            />
 
-            <div className='filter-group'>
-              <FaTrophy className='filter-icon' />
-              <select
-                className='rounded-md'
-                value={selectedPriority}
-                onChange={(e) => setSelectedPriority(e.target.value)}
-              >
-                <option value='ALL'>Todas las Prioridades</option>
-                {filterOptions.priorities.map((p) => (
-                  <option key={p} value={p}>
-                    {p}
-                  </option>
-                ))}
-              </select>
-            </div>
+            <CustomDropdown
+              icon={<FaTrophy />}
+              label='Todas las Prioridades'
+              options={filterOptions.priorities}
+              value={selectedPriority}
+              onChange={setSelectedPriority}
+              formatLabel={(p) => p}
+            />
 
             {(searchTerm ||
               selectedBoss !== 'ALL' ||

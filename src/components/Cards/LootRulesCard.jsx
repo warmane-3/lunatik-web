@@ -25,7 +25,15 @@ const LootRulesCard = memo(() => {
         </li>
         <li>Los nuevos reclutas reciben DKP de bienvenida.</li>
       </ul>
-      <Link to='/rules'>Ver más</Link>
+
+      <div className='flex justify-center'>
+        <Link
+          to='/lootrules'
+          className='px-4 py-1 text-center mt-9 text-[#a955f7] underline hover:text-purple-300'
+        >
+          Ver más
+        </Link>
+      </div>
     </div>
   )
 })

@@ -8,6 +8,7 @@ import Register from './components/Register/Register'
 import ItemBis from './views/ItemsBis/ItemsBis'
 import Rules from './views/Rules/Rules'
 import LootTable from './views/LootTable/LootTable'
+import LootRules from './views/LootRules/LootRules'
 import Footer from './components/Footer/Footer'
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
           />
           <Route path='/rules' element={<Rules />} />
           <Route path='/loottable' element={<LootTable />} />
+          <Route path='/lootrules' element={<LootRules />} />
         </Routes>
       </main>
       {pathname !== '/login' && pathname !== '/register' && <Footer />}
