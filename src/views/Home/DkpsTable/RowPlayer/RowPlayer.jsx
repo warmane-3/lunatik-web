@@ -37,7 +37,7 @@ const RowPlayer = ({
   const handleRowColorChange = useCallback(
     (isHovering) => {
       if (isHovering) {
-        setColor('#C89B3C33')
+        setColor('#A855F733')
       } else {
         setColor(i % 2 !== 0 ? '#86868623' : '')
       }

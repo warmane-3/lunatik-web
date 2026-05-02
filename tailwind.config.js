@@ -5,16 +5,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Guild Branding
-        primary: '#1152d4',
-        'primary-hover': '#0d3fa8',
+        // Guild Branding (Lunatik Space)
+        primary: '#A855F7',
+        'primary-hover': '#9333EA',
 
         // Backgrounds
         'background-light': '#f6f6f8',
-        'background-dark': '#101622',
-        'background-darker': '#0a0c0e',
-        'surface-dark': '#111722',
-        'surface-darker': '#192233',
+        'background-dark': '#020617',
+        'background-darker': '#010409',
+        'surface-dark': '#0F172A',
+        'surface-darker': '#1E293B',
 
         // Class Colors (WoW)
         'class-dk': '#C41F3B',
@@ -29,11 +29,11 @@ export default {
         'class-warrior': '#C79C6E',
 
         // UI Colors
-        'accent-gold': '#C89B3C',
-        'accent-gold-light': '#ffd700',
-        'border-color': '#324467',
-        'text-secondary': '#92a4c9',
-        'text-muted': '#7e7f83'
+        'accent-cyan': '#22D3EE',
+        'accent-cyan-light': '#67E8F9',
+        'border-color': '#334155',
+        'text-secondary': '#94A3B8',
+        'text-muted': '#64748B'
       },
       fontFamily: {
         display: ['Spline Sans', 'sans-serif']

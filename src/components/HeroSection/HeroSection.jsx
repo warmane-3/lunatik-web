@@ -19,12 +19,12 @@ const HeroSection = memo(() => {
         <div
           className='flex min-h-100 flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4'
           style={{
-            backgroundImage: `linear-gradient(rgba(16, 22, 34, 0.7) 0%, rgba(16, 22, 34, 0.9) 100%), url("https://res.cloudinary.com/dniekrmqb/image/upload/f_auto,w_auto/v1771267757/grimreaper/grimreaperbackground_dpcnze")`
+            backgroundImage: `linear-gradient(rgba(16, 22, 34, 0.7) 0%, rgba(16, 22, 34, 0.9) 100%)`
           }}
         >
           <div className='flex flex-col gap-2 text-center'>
             <h1 className='text-4xl font-black leading-tight tracking-[-0.033em] text-white @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]'>
-              Bienvenido a GrimReaper
+              Bienvenido a Lunatik
             </h1>
             <h2 className='text-sm font-normal leading-normal text-white/80 @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal'>
               Conquistadores de la Ciudadela de la Corona de Hielo. ¡Por la

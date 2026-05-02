@@ -27,10 +27,10 @@
 }
 
 .navbar-active {
-  /* background: rgba(95, 0, 0, 0.466); */
-  border-bottom: 1px solid #646cff;
+  /* background: rgba(168, 85, 247, 0.2); */
+  border-bottom: 2px solid #22d3ee;
   /* border-radius: 5px; */
-  /* color: aliceblue; */
+  color: #22d3ee;
   font-size: 14px;
   padding: 0px 2px;
   pointer-events: none;
@@ -39,7 +39,12 @@
 .navbar-link {
   /* background: rgba(95, 0, 0, 0.466); */
   /* border-radius: 5px; */
-  color: aliceblue;
+  color: #f8fafc;
   padding: 0px 2px;
   font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #a855f7;
 }

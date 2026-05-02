@@ -1,10 +1,10 @@
-# GrimReaper Project Documentation
+# Lunatik Project Documentation
 
-Welcome to the GrimReaper project! This document provides a high-level overview of the project's architecture, technologies, and development conventions to help you navigate and contribute effectively.
+Welcome to the Lunatik project! This document provides a high-level overview of the project's architecture, technologies, and development conventions to help you navigate and contribute effectively.
 
 ## Project Overview
 
-GrimReaper is a web-based DKP (Dragon Kill Points) management system designed for a World of Warcraft guild. It allows guild members to track their DKP, view Best-in-Slot (BiS) lists, and see character details.
+Lunatik is a web-based DKP (Dragon Kill Points) management system designed for a World of Warcraft guild. It allows guild members to track their DKP, view Best-in-Slot (BiS) lists, and see character details.
 
 ### Core Features
 - **DKP Tracking:** A comprehensive table showing players, their classes, ranks, and current DKP.
@@ -25,7 +25,7 @@ GrimReaper is a web-based DKP (Dragon Kill Points) management system designed fo
 ## Directory Structure
 
 ```text
-grimreaper/
+Lunatik/
 ├── public/                 # Static assets (SVGs, icons)
 ├── src/
 │   ├── assets/             # Images and local SVGs

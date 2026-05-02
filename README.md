@@ -1,6 +1,6 @@
 ## Estructura del Proyecto
 
-El proyecto GrimReaper es una aplicación React que gestiona DKP para un guild de World of Warcraft [0-cite-0](#0-cite-0) . La aplicación ya tiene soporte multiidioma (español e inglés) implementado en varios componentes [0-cite-1](#0-cite-1) .
+El proyecto Lunatik es una aplicación React que gestiona DKP para un guild de World of Warcraft [0-cite-0](#0-cite-0) . La aplicación ya tiene soporte multiidioma (español e inglés) implementado en varios componentes [0-cite-1](#0-cite-1) .
 
 ## Componentes Principales
 

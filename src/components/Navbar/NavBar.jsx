@@ -17,7 +17,7 @@ const NavBar = () => {
             <GiReaperScythe size={24} />
           </div>
           <h2 className='text-lg font-bold leading-tight tracking-[-0.015em] text-white'>
-            &lt;GrimReaper&gt;
+            &lt;Lunatik&gt;
           </h2>
         </Link>
 

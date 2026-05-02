@@ -12,16 +12,17 @@
 .searchplayer-form {
   display: flex;
   align-items: center;
-  background: rgba(10, 12, 14, 0.8);
-  border: 1px solid #c89b3c;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid #a855f7;
   border-radius: 30px;
   /* overflow: hidden; */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 .searchplayer-form:focus-within {
-  box-shadow: 0 0 0 3px rgba(200, 155, 60, 0.3);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.3);
 }
 
 .searchplayer-form input {
@@ -29,31 +30,31 @@
   padding: 0 15px;
   border: none;
   background: transparent;
-  color: #f0e6d2;
+  color: #f8fafc;
   font-size: 16px;
   width: 250px;
   outline: none;
 }
 
 .searchplayer-form input::placeholder {
-  color: #7e7f83;
+  color: #64748b;
 }
 
 .searchplayer-form button {
   height: 40px;
   padding: 0 20px;
   border: none;
-  background: linear-gradient(145deg, #c89b3c, #a67c00);
-  color: #0a0c0e;
+  background: linear-gradient(145deg, #a855f7, #7e22ce);
+  color: #f8fafc;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-left: 1px solid #c89b3c;
+  border-left: 1px solid #a855f7;
   font-family: 'Cinzel', serif;
 }
 
 .searchplayer-form button:hover {
-  background: linear-gradient(145deg, #d4af37, #b8860b);
+  background: linear-gradient(145deg, #c084fc, #9333ea);
   transform: scale(1.02);
 }
 
@@ -66,8 +67,8 @@
   top: 45px;
   left: 0;
   width: 300px;
-  background: #1e1f25;
-  border: 1px solid #c89b3c;
+  background: #0f172a;
+  border: 1px solid #22d3ee;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
   z-index: 100;
@@ -90,13 +91,13 @@
   font-size: 16px;
   padding: 10px 15px;
   margin: 0;
-  color: #f0e6d2;
+  color: #f8fafc;
   cursor: pointer;
   transition:
     background 0.3s ease,
     color 0.3s ease;
   font-family: 'Roboto', sans-serif;
-  border-bottom: 1px solid rgba(200, 155, 60, 0.2);
+  border-bottom: 1px solid rgba(34, 211, 238, 0.2);
 }
 
 .searchplayer-found h1:last-child {
@@ -104,8 +105,8 @@
 }
 
 .searchplayer-found h1:hover {
-  background: #c89b3c;
-  color: #0a0c0e;
+  background: #22d3ee;
+  color: #020617;
 }
 
 .button-add-dkp-container {
@@ -120,10 +121,10 @@
 .button-add-dkp {
   height: 40px;
   padding: 0 20px;
-  background: linear-gradient(145deg, #c89b3c, #8b6910);
+  background: linear-gradient(145deg, #a855f7, #581c87);
   border: none;
   border-radius: 20px;
-  color: #0a0c0e;
+  color: #f8fafc;
   font-weight: bold;
   font-family: 'Cinzel', serif;
   cursor: pointer;
@@ -132,9 +133,9 @@
 }
 
 .button-add-dkp:hover {
-  background: linear-gradient(145deg, #d4af37, #a67c00);
+  background: linear-gradient(145deg, #c084fc, #7e22ce);
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(200, 155, 60, 0.4);
+  box-shadow: 0 6px 12px rgba(168, 85, 247, 0.4);
 }
 
 .button-add-dkp:active {
@@ -154,10 +155,10 @@
 .date {
   height: 40px;
   padding: 0 15px;
-  background: #2a2c33;
-  border: 1px solid #c89b3c;
+  background: #1e293b;
+  border: 1px solid #a855f7;
   border-radius: 20px;
-  color: #f0e6d2;
+  color: #f8fafc;
   font-size: 14px;
   cursor: pointer;
   position: relative;
@@ -170,7 +171,7 @@
 }
 
 .date:hover {
-  background: #3a3c44;
+  background: #334155;
   transform: scale(1.02);
 }
 
@@ -185,8 +186,8 @@
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
-  background: #1e1f25;
-  border: 1px solid #c89b3c;
+  background: #0f172a;
+  border: 1px solid #22d3ee;
   border-radius: 8px;
   padding: 10px;
   display: flex;
@@ -206,10 +207,10 @@
 
 .list-days button {
   padding: 8px 12px;
-  background: linear-gradient(145deg, #c89b3c, #8b6910);
+  background: linear-gradient(145deg, #a855f7, #581c87);
   border: none;
   border-radius: 5px;
-  color: #0a0c0e;
+  color: #f8fafc;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -217,7 +218,7 @@
 }
 
 .list-days button:hover {
-  background: linear-gradient(145deg, #d4af37, #a67c00);
+  background: linear-gradient(145deg, #c084fc, #7e22ce);
   transform: scale(1.05);
 }
 
