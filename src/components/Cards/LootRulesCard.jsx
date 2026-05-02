@@ -3,6 +3,9 @@ import { MdOutlineGavel } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 
 const LootRulesCard = memo(() => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   return (
     <div
       className='flex flex-col rounded-xl border border-border-color bg-surface-dark/60 p-6 backdrop-blur-md'
@@ -28,6 +31,7 @@ const LootRulesCard = memo(() => {
 
       <div className='flex justify-center'>
         <Link
+          onClick={scrollToTop}
           to='/lootrules'
           className='px-4 py-1 text-center mt-9 text-[#a955f7] underline hover:text-purple-300'
         >

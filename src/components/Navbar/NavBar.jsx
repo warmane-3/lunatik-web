@@ -1,7 +1,7 @@
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import { FaRegMoon } from "react-icons/fa6"
+import { FaRegMoon } from 'react-icons/fa6'
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -9,11 +9,19 @@ const NavBar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
   const closeMenu = () => setIsMenuOpen(false)
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <header className='fixed top-0 z-50 flex w-full items-center justify-center border-b border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-sm dark:bg-background-dark/80 sm:px-10'>
       <div className='flex w-full max-w-7xl items-center justify-between'>
         {/* Logo and Guild Name */}
-        <Link to={'/'} className='flex items-center gap-2 text-white'>
+        <Link
+          to={'/'}
+          onClick={scrollToTop}
+          className='flex items-center gap-2 text-white'
+        >
           <div className='size-6'>
             <FaRegMoon size={24} color='#a855f7' />
           </div>
@@ -26,25 +34,29 @@ const NavBar = () => {
         <div className='hidden items-center gap-9 md:flex'>
           <Link
             to='/'
+            onClick={scrollToTop}
             className='text-sm font-medium leading-normal text-white/80 hover:text-white'
           >
             HOME
           </Link>
-          
+
           <Link
             to='/loottable'
+            onClick={scrollToTop}
             className='text-sm font-medium leading-normal text-white/80 hover:text-white'
           >
             LOOT LIST
           </Link>
           <Link
             to='/lootrules'
+            onClick={scrollToTop}
             className='text-sm font-medium leading-normal text-white/80 hover:text-white'
           >
             SISTEMA DKP
           </Link>
           <Link
             to='/rules'
+            onClick={scrollToTop}
             className='text-sm font-medium leading-normal text-white/80 hover:text-white'
           >
             RANGOS Y REGLAS
@@ -78,28 +90,40 @@ const NavBar = () => {
           <div className='flex flex-col space-y-3'>
             <Link
               to='/'
-              onClick={closeMenu}
+              onClick={() => {
+                closeMenu()
+                scrollToTop()
+              }}
               className='text-sm font-medium leading-normal text-white/80 hover:text-white py-2'
             >
               HOME
             </Link>
             <Link
               to='/rules'
-              onClick={closeMenu}
+              onClick={() => {
+                closeMenu()
+                scrollToTop()
+              }}
               className='text-sm font-medium leading-normal text-white/80 hover:text-white py-2'
             >
               REGLAS
             </Link>
             <Link
               to='/loottable'
-              onClick={closeMenu}
+              onClick={() => {
+                closeMenu()
+                scrollToTop()
+              }}
               className='text-sm font-medium leading-normal text-white/80 hover:text-white py-2'
             >
               LOOT
             </Link>
             <Link
               to='/lootrules'
-              onClick={closeMenu}
+              onClick={() => {
+                closeMenu()
+                scrollToTop()
+              }}
               className='text-sm font-medium leading-normal text-white/80 hover:text-white py-2'
             >
               SISTEMA DKP

@@ -16,6 +16,10 @@ const BiSListsCard = memo(() => {
     { name: 'Druid', colorHex: '#FF7D0A' }
   ]
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <div
       className='flex flex-col rounded-xl border border-border-color bg-surface-dark/60 p-6 backdrop-blur-md'
@@ -36,6 +40,7 @@ const BiSListsCard = memo(() => {
       <div className='grid grid-cols-3 gap-3 sm:grid-cols-4'>
         {classColors.map((classItem) => (
           <Link
+            onClick={scrollToTop}
             to={`/loottable`}
             key={classItem.name}
             // onClick={() => handleClassClick(classItem.name)}
