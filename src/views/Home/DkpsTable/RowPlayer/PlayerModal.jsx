@@ -178,10 +178,11 @@ const ErrorDisplay = memo(({ onRetry }) => {
   return (
     <div className='error-container'>
       <div className='error-icon'>⚠️</div>
-      <h2 className='error-title'>Personaje no encontrado</h2>
+      <h2 className='error-title'>Error al obtener datos</h2>
       <p className='error-message'>
-        El personaje cambió de nombre. Por favor, verificar dentro del juego o
-        en la plataforma Warmane.
+        Warmane tiene protección Cloudflare que impide obtener los datos del
+        personaje. Por favor, verifica manualmente en el juego o en la web de
+        Warmane.
       </p>
       <button
         className='error-retry-button'

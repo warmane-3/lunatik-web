@@ -31,8 +31,6 @@ const DkpsTable = ({ showAddDKP, setButtonShowAddDkp, onPlayerSelect }) => {
 
   // Ordena por Clase
   const classOrder = () => {
-    console.log('mains 123', mains)
-
     if (mains === undefined || !mains.length) {
       return []
     }
@@ -67,8 +65,6 @@ const DkpsTable = ({ showAddDKP, setButtonShowAddDkp, onPlayerSelect }) => {
 
   // Ordena por Nombre
   const nameOrder = () => {
-    console.log('mains 123', mains)
-
     if (mains === undefined || !mains.length) {
       return []
     }
@@ -83,14 +79,12 @@ const DkpsTable = ({ showAddDKP, setButtonShowAddDkp, onPlayerSelect }) => {
       return []
     }
     const newORderMain = [...mains].sort(
-      (a, b) => rankPriority[a.rank] - rankPriority[b.rank]
+      (a, b) => (rankPriority[a.rank] ?? 999) - (rankPriority[b.rank] ?? 999)
     )
     return newORderMain
   }
 
   const dkpsOrder = () => {
-    console.log('mains 123', mains)
-
     if (mains === undefined || !mains.length) {
       return []
     }

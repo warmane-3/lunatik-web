@@ -38,9 +38,7 @@ export const orderFunction = (array) => {
   return newORder
 }
 
-// se encesita usar VITE en la variable de entorno
 const BACK_END = import.meta.env.VITE_LOCAL
-console.log(BACK_END)
 
 let API_BACK
 let VITE_SCRAP
