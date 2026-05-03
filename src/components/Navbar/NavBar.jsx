@@ -1,10 +1,15 @@
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { FaRegMoon } from 'react-icons/fa6'
+import { useSelector, useDispatch } from 'react-redux'
+import { logoutUser } from '../../redux/slice/sliceLogin'
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const user = useSelector((state) => state.user.userState.user)
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
   const closeMenu = () => setIsMenuOpen(false)
@@ -12,6 +17,15 @@ const NavBar = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+
+  const handleLogout = () => {
+    dispatch(logoutUser())
+    navigate('/')
+  }
+
+  const isLoggedIn = user
+
+  console.log('user Navbar', user)
 
   return (
     <header className='fixed top-0 z-50 flex w-full items-center justify-center border-b border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-sm dark:bg-background-dark/80 sm:px-10'>
@@ -65,13 +79,22 @@ const NavBar = () => {
 
         {/* Right side: Login + Hamburger */}
         <div className='flex items-center gap-2'>
-          <Link
-            to='/login'
-            className='flex min-w-21 max-w-120 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary-hover transition-colors'
-            rel='noopener noreferrer'
-          >
-            <span className='truncate'>Login</span>
-          </Link>
+          {isLoggedIn ? (
+            <button
+              onClick={handleLogout}
+              className='flex min-w-21 max-w-120 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-red-600/80 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-red-600 transition-colors'
+            >
+              <span className='truncate'>Logout</span>
+            </button>
+          ) : (
+            <Link
+              to='/login'
+              className='flex min-w-21 max-w-120 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary-hover transition-colors'
+              rel='noopener noreferrer'
+            >
+              <span className='truncate'>Login</span>
+            </Link>
+          )}
 
           {/* Hamburger button (visible only on mobile) */}
           <button

@@ -66,7 +66,6 @@ export const playerSlice = createSlice({
         state.loader = true
       })
       .addCase(getActual.fulfilled, (state, action) => {
-        // Aquí puedes manejar el estado cuando la acción se completa exitosamente
         state.loader = false
         state.mains = action.payload
       })
@@ -81,27 +80,23 @@ export const playerSlice = createSlice({
         state.loader = true
       })
       .addCase(getFirst.fulfilled, (state, action) => {
-        // Aquí puedes manejar el estado cuando la acción se completa exitosamente
         state.loader = false
         state.mains = action.payload
+        state.alters = []
       })
       .addCase(getFirst.rejected, (state, action) => {
-        // Aquí puedes manejar el estado cuando la acción es rechazada (error)
         state.loader = false
         state.error = action.error.message
       })
       .addCase(getSecond.pending, (state) => {
-        // Aquí puedes manejar el estado mientras la acción está en curso (cargando)
-        // Puedes mostrar un indicador de carga, por ejemplo
         state.loader = true
       })
       .addCase(getSecond.fulfilled, (state, action) => {
-        // Aquí puedes manejar el estado cuando la acción se completa exitosamente
         state.loader = false
         state.mains = action.payload
+        state.alters = []
       })
       .addCase(getSecond.rejected, (state, action) => {
-        // Aquí puedes manejar el estado cuando la acción es rechazada (error)
         state.loader = false
         state.error = action.error.message
       })

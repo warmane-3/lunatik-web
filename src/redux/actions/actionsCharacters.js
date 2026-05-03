@@ -25,7 +25,7 @@ export const getActual = createAsyncThunk(
   async (userValue, thunkAPI) => {
     try {
       // Realiza la llamada a la API con los datos del usuario
-      const response = await fetch(`${API}/main/actual`)
+      const response = await fetch(`${API}/characters`)
 
       // Convierte la respuesta en JSON
       const data = await response.json()

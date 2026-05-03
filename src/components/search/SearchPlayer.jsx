@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './SearchPlayer.css'
 import { useDispatch, useSelector } from 'react-redux'
 import {
-  getActual,
+  getMainAndAlters,
   getFirst,
   getSecond
 } from '../../redux/actions/actionsCharacters'
@@ -11,7 +11,6 @@ const SearchPlayer = ({
   players,
   onPlayerClick,
   setRenderData,
-  showAddDKP,
   setButtonShowAddDkp
 }) => {
   const [found, setFound] = useState([])
@@ -20,6 +19,7 @@ const SearchPlayer = ({
   const [lastDays, setLastDays] = useState(false)
   const [listDays, setListDays] = useState(false)
   const { date } = useSelector((state) => state.players)
+  const user = useSelector((state) => state.user.userState.user)
   let hoursMin = ''
   let day = ''
   let month = ''
@@ -68,7 +68,7 @@ const SearchPlayer = ({
 
   const getDkps = (day) => {
     if (day === 'actual') {
-      dispatch(getActual())
+      dispatch(getMainAndAlters())
     } else if (day === 'undia') {
       dispatch(getFirst())
     } else if (day === 'dosdias') {
@@ -114,7 +114,7 @@ const SearchPlayer = ({
         </div>
         <button type='submit'>Buscar</button>
       </form>
-      {showAddDKP && (
+      {user && (
         <div className='button-add-dkp-container'>
           <button
             onClick={(e) => {
@@ -127,18 +127,20 @@ const SearchPlayer = ({
           </button>
         </div>
       )}
-      {/* <div className='date-container'>
+      <div
+        className='date-container'
+        onClick={(e) => {
+          e.stopPropagation()
+          setListDays(!listDays)
+        }}
+      >
         <div
+          className='date'
           onMouseLeave={() => {
             setLastDays(false)
             setListDays(false)
           }}
           onMouseEnter={() => setLastDays(true)}
-          onClick={(e) => {
-            e.stopPropagation()
-            setListDays(true)
-          }}
-          className='date'
         >
           {lastDays ? (
             <h1>Ver días anteriores</h1>
@@ -156,7 +158,7 @@ const SearchPlayer = ({
             </div>
           )}
         </div>
-      </div> */}
+      </div>
     </div>
   )
 }

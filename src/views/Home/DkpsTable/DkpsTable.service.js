@@ -1,16 +1,16 @@
 export const header = ['Personaje', 'Clase', 'Rango', 'Dkps']
 export const colorsClass = [
-  { color: '#8788EE', class: 'Brujo' },
-  { color: '#C41E3A', class: 'Caballero de la Muerte' },
-  { color: '#AAD372', class: 'Cazador' },
-  { color: '#0070DD', class: 'Chamán' },
-  { color: '#FF7C0A', class: 'Druida' },
-  { color: '#C69B6D', class: 'Guerrero' },
-  { color: '#3FC7EB', class: 'Mago' },
-  { color: '#3FC7EB', class: 'Maga' },
-  { color: '#F48CBA', class: 'Paladín' },
-  { color: '#FFF468', class: 'Pícaro' },
-  { color: '#FFFFFF', class: 'Sacerdote' }
+  { color: '#8788EE', class: 'Warlock' },
+  { color: '#C41E3A', class: 'Death Knight' },
+  { color: '#AAD372', class: 'Hunter' },
+  { color: '#0070DD', class: 'Shaman' },
+  { color: '#FF7C0A', class: 'Druid' },
+  { color: '#C69B6D', class: 'Warrior' },
+  { color: '#3FC7EB', class: 'Mage' },
+  { color: '#3FC7EB', class: 'Mage' },
+  { color: '#F48CBA', class: 'Paladin' },
+  { color: '#FFF468', class: 'Rogue' },
+  { color: '#FFFFFF', class: 'Priest' }
 ]
 
 export const selectColor = (playerClass, _elemento) => {

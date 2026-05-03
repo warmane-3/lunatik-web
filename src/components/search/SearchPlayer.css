@@ -7,6 +7,7 @@
   align-items: center;
   flex-wrap: wrap;
   /* gap: 15px; */
+  position: relative;
 }
 
 .searchplayer-form {
@@ -110,7 +111,8 @@
 }
 
 .button-add-dkp-container {
-  position: static;
+  position: absolute;
+  right: 20px;
   height: auto;
   width: auto;
   pointer-events: auto;
@@ -144,12 +146,14 @@
 }
 
 .date-container {
-  position: static;
+  position: absolute;
+  left: 10px;
   height: auto;
-  width: auto;
+  width: 238px;
   pointer-events: auto;
   display: flex;
   justify-content: center;
+  z-index: 100;
 }
 
 .date {
@@ -183,7 +187,7 @@
 
 .list-days {
   position: absolute;
-  top: 50px;
+  top: 40px;
   left: 50%;
   transform: translateX(-50%);
   background: #0f172a;

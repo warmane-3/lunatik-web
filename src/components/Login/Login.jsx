@@ -4,7 +4,8 @@ import './Login.css'
 import { useNavigate } from 'react-router'
 import { objectPost } from '../../helpers/objetPost'
 import { MdVisibility, MdVisibilityOff } from 'react-icons/md'
-// import { useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { addUser } from '../../redux/slice/sliceLogin'
 
 const Login = ({ setShowAddDkp }) => {
   const [inputValue, setInputValue] = useState({
@@ -13,14 +14,16 @@ const Login = ({ setShowAddDkp }) => {
   })
   const [showPassword, setShowPassword] = useState(false)
   const navigate = useNavigate()
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   const onSubmitForm = async (e) => {
     e.preventDefault()
     const response = await fetch(`${API}/login`, objectPost(inputValue))
     const result = await response.json()
     if (result.response) {
+      console.log("result.response", result.response)
       setShowAddDkp(result.response)
+      dispatch(addUser(result.response))
       navigate('/')
     }
   }

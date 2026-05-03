@@ -18,10 +18,7 @@ const DkpsTable = ({ showAddDKP, setButtonShowAddDkp, onPlayerSelect }) => {
   const { alters, mains, loader } = useSelector((state) => state.players)
 
   useEffect(() => {
-    // if (renderData.length === 0) {
     setRenderData(mains)
-    // }
-    console.log(mains)
   }, [mains])
 
   useEffect(() => {
@@ -34,19 +31,23 @@ const DkpsTable = ({ showAddDKP, setButtonShowAddDkp, onPlayerSelect }) => {
 
   // Ordena por Clase
   const classOrder = () => {
+    console.log('mains 123', mains)
+
+    if (mains === undefined || !mains.length) {
+      return []
+    }
     const order = [...mains]
     const classMap = {
-      Brujo: [],
-      'Caballero de la Muerte': [],
-      Cazador: [],
-      Chamán: [],
-      Druida: [],
-      Guerrero: [],
-      Mago: [],
-      Maga: [],
-      Paladín: [],
-      Pícaro: [],
-      Sacerdote: []
+      Warlock: [],
+      'Death Knight': [],
+      Hunter: [],
+      Shaman: [],
+      Druid: [],
+      Warrior: [],
+      Mage: [],
+      Paladin: [],
+      Rogue: [],
+      Priest: []
     }
 
     order.forEach((ele) => {
@@ -66,6 +67,11 @@ const DkpsTable = ({ showAddDKP, setButtonShowAddDkp, onPlayerSelect }) => {
 
   // Ordena por Nombre
   const nameOrder = () => {
+    console.log('mains 123', mains)
+
+    if (mains === undefined || !mains.length) {
+      return []
+    }
     const order = [...mains]
     const newORderMain = order.sort((a, b) => a.name.localeCompare(b.name))
     return newORderMain
@@ -73,13 +79,21 @@ const DkpsTable = ({ showAddDKP, setButtonShowAddDkp, onPlayerSelect }) => {
 
   // Ordena por Rango
   const rankOrder = () => {
-    const newORderMain = classOrder().sort(
+    if (mains === undefined || !mains.length) {
+      return []
+    }
+    const newORderMain = [...mains].sort(
       (a, b) => rankPriority[a.rank] - rankPriority[b.rank]
     )
     return newORderMain
   }
 
   const dkpsOrder = () => {
+    console.log('mains 123', mains)
+
+    if (mains === undefined || !mains.length) {
+      return []
+    }
     const order = [...mains]
     const newORderMain = order.sort((a, b) => b.net - a.net)
     return newORderMain
