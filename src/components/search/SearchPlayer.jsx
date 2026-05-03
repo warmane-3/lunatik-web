@@ -10,14 +10,13 @@ import {
 const SearchPlayer = ({
   players,
   onPlayerClick,
-  setRenderData,
   setButtonShowAddDkp
 }) => {
   const [found, setFound] = useState([])
   const [inputValue, setInputValue] = useState('')
-  const [colorH1, setColorH1] = useState({})
   const [lastDays, setLastDays] = useState(false)
   const [listDays, setListDays] = useState(false)
+  const [selectedIndex, setSelectedIndex] = useState(-1)
   const { date } = useSelector((state) => state.players)
   const user = useSelector((state) => state.user.userState.user)
   let hoursMin = ''
@@ -29,16 +28,48 @@ const SearchPlayer = ({
     const [first, second] = dateOne.split('-')
     day = first
     month = second
-    console.log(date)
   }
 
   const dispatch = useDispatch()
+
+  const handleKeyDown = (e) => {
+    if (found.length === 0) return
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault()
+      setSelectedIndex((prev) =>
+        prev < found.length - 1 ? prev + 1 : 0
+      )
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault()
+      setSelectedIndex((prev) =>
+        prev > 0 ? prev - 1 : found.length - 1
+      )
+    } else if (e.key === 'Enter') {
+      e.preventDefault()
+      if (selectedIndex >= 0 && found[selectedIndex]) {
+        onPlayerClick(found[selectedIndex].name)
+        setInputValue('')
+        setFound([])
+        setSelectedIndex(-1)
+      } else if (selectedIndex === -1) {
+        onPlayerClick(found[0].name)
+        setSelectedIndex(-1)
+        setFound([])
+        setInputValue('')
+      }
+    } else if (e.key === 'Escape') {
+      setFound([])
+      setSelectedIndex(-1)
+    }
+  }
 
   const find = (e) => {
     e.preventDefault()
     if (e.target.value.length <= 0) {
       setFound([])
       setInputValue(e.target.value)
+      setSelectedIndex(-1)
       return
     }
     let primeraLetra = e.target.value.charAt(0).toUpperCase()
@@ -48,22 +79,18 @@ const SearchPlayer = ({
       .slice(0, 10)
     setFound(resultado)
     setInputValue(e.target.value)
-  }
-
-  const color = (backColor, name) => {
-    setColorH1({ name, backColor })
+    setSelectedIndex(-1)
   }
 
   const onSubmitForm = (e) => {
     e.preventDefault()
-    let primeraLetra = inputValue.charAt(0).toUpperCase()
-    let restoDelInput = inputValue.slice(1)
-    const resultado = players.filter((ele) =>
-      ele.name.startsWith(primeraLetra + restoDelInput)
-    )
+    if (found.length <= 0) {
+      return
+    }
+    onPlayerClick(found[0].name)
     setInputValue('')
     setFound([])
-    setRenderData(resultado)
+    setSelectedIndex(-1)
   }
 
   const getDkps = (day) => {
@@ -84,6 +111,7 @@ const SearchPlayer = ({
             value={inputValue}
             type='text'
             onChange={find}
+            onKeyDown={handleKeyDown}
             placeholder='Buscar Personaje Main'
           />
           {found.length > 0 && (
@@ -91,16 +119,15 @@ const SearchPlayer = ({
               {found.map((ele, i) => {
                 return (
                   <h1
-                    style={{
-                      backgroundColor:
-                        ele.name === colorH1.name && colorH1.backColor
-                    }}
-                    onMouseEnter={() => color('#371d94', ele.name)}
-                    onMouseLeave={() => color('')}
-                    onClick={() => {
+                    className={selectedIndex === i ? 'selected' : ''}
+                    onMouseEnter={() => setSelectedIndex(i)}
+                    onMouseLeave={() => setSelectedIndex(-1)}
+                    onClick={(e) => {
+                      e.stopPropagation()
                       onPlayerClick(ele.name)
                       setFound([])
                       setInputValue('')
+                      setSelectedIndex(-1)
                     }}
                     key={i}
                     id={ele.name}

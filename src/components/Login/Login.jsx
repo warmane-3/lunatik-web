@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { API } from '../../views/Home/DkpsTable/DkpsTable.service'
 import './Login.css'
 import { useNavigate } from 'react-router'
 import { objectPost } from '../../helpers/objetPost'
 import { MdVisibility, MdVisibilityOff } from 'react-icons/md'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addUser } from '../../redux/slice/sliceLogin'
 
 const Login = ({ setShowAddDkp }) => {
@@ -15,13 +15,14 @@ const Login = ({ setShowAddDkp }) => {
   const [showPassword, setShowPassword] = useState(false)
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  const user = useSelector((state) => state.user.userState.user)
 
   const onSubmitForm = async (e) => {
     e.preventDefault()
     const response = await fetch(`${API}/login`, objectPost(inputValue))
     const result = await response.json()
     if (result.response) {
-      console.log("result.response", result.response)
+      console.log('result.response', result.response)
       setShowAddDkp(result.response)
       dispatch(addUser(result.response))
       navigate('/')
@@ -41,6 +42,14 @@ const Login = ({ setShowAddDkp }) => {
       })
     }
   }
+
+  useEffect(() => {
+    if (user) {
+      navigate('/')
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
 
   return (
     <div className='login'>

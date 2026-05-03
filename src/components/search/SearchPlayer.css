@@ -66,10 +66,9 @@
 .searchplayer-found {
   position: absolute;
   top: 45px;
-  left: 0;
-  width: 300px;
+  /* width: 300px; */
   background: #0f172a;
-  border: 1px solid #22d3ee;
+  border: 1px solid #9333ea;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
   z-index: 100;
@@ -105,7 +104,8 @@
   border-bottom: none;
 }
 
-.searchplayer-found h1:hover {
+.searchplayer-found h1:hover,
+.searchplayer-found h1.selected {
   background: #22d3ee;
   color: #020617;
 }

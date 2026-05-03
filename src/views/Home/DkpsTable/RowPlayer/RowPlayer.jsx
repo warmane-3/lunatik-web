@@ -61,7 +61,7 @@ const RowPlayer = ({
       greenColorTimeoutRef.current = setTimeout(() => {
         setGreenColor('')
       }, 3000)
-      return '#008104'
+      return '#5a459f'
     }
     return color
   }, [greenColor, ele.name, color, setGreenColor])

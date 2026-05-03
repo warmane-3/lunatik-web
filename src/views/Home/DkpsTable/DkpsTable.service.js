@@ -22,12 +22,15 @@ export const selectColor = (playerClass, _elemento) => {
 }
 
 export const rankPriority = {
-  'Guild Master': 1,
-  Officer: 2,
-  Veteran: 3,
-  Member: 4,
-  Initiate: 5,
-  '*External*': 6
+  Lunatik: 1,
+  Lunatika: 2,
+  Cosmic: 3,
+  'Astral Moon': 4,
+  Stellar: 5,
+  Eternal: 6,
+  Mystic: 7,
+  Crescent: 8,
+  'New Moon': 9
 }
 
 export const orderFunction = (array) => {
