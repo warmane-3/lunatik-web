@@ -6,6 +6,8 @@ import { objectPost } from '../../helpers/objetPost'
 import { MdVisibility, MdVisibilityOff } from 'react-icons/md'
 import { useDispatch, useSelector } from 'react-redux'
 import { addUser, setUserData } from '../../redux/slice/sliceLogin'
+import Swal from 'sweetalert2'
+import { Link } from 'react-router-dom'
 
 const Login = ({ setShowAddDkp }) => {
   const [inputValue, setInputValue] = useState({
@@ -27,6 +29,25 @@ const Login = ({ setShowAddDkp }) => {
       dispatch(setUserData(inputValue))
       dispatch(addUser(result.response))
       navigate('/')
+    } else if (result.error) {
+      await Swal.fire({
+        title: result.error,
+        text: 'Por favor, verifica tus credenciales e intenta de nuevo.',
+        icon: 'error',
+        confirmButtonText: 'OK',
+        background: '#150529', // Púrpura muy oscuro para el fondo
+        color: '#C77DFF', // Lavanda brillante para el texto principal
+        confirmButtonColor: '#7B2CBF', // Púrpura vibrante para el botón
+        backdrop: `
+        rgba(5, 3, 14, 0.8)  /* Negro espacial con opacidad */
+      `,
+        customClass: {
+          popup: 'custom-swal-popup',
+          title: 'custom-swal-title',
+          content: 'custom-swal-content',
+          confirmButton: 'custom-swal-confirm-button'
+        }
+      })
     }
   }
 
@@ -48,9 +69,8 @@ const Login = ({ setShowAddDkp }) => {
     if (user) {
       navigate('/')
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
 
   return (
     <div className='login'>
@@ -63,6 +83,7 @@ const Login = ({ setShowAddDkp }) => {
             type='text'
             onChange={handleOnChange}
             placeholder='Introduce tu usuario'
+            autoComplete='username'
           />
         </div>
         <div className='login-input'>
@@ -73,6 +94,7 @@ const Login = ({ setShowAddDkp }) => {
               type={showPassword ? 'text' : 'password'}
               onChange={handleOnChange}
               placeholder='Introduce tu contraseña'
+              autoComplete='current-password'
             />
             <button
               type='button'
@@ -86,6 +108,9 @@ const Login = ({ setShowAddDkp }) => {
         <button type='submit' className='login-submit'>
           Login
         </button>
+        <Link to='/login/forgot-password' className='login-forgot-password'>
+          ¿Olvidaste tu contraseña?
+        </Link>
       </form>
     </div>
   )

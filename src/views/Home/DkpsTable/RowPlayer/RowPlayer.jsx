@@ -20,21 +20,35 @@ const RowPlayer = ({
   const user = useSelector((state) => state.user.userState.user)
   const userData = useSelector((state) => state.user.userState.userData)
 
-  const handleDelete = useCallback(async (e) => {
-    e.stopPropagation()
-    const result = await Swal.fire({
-      title: `Eliminar ${ele.name}?`,
-      text: 'Esto eliminará el personaje y todos sus alters.',
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonText: 'Eliminar',
-      cancelButtonText: 'Cancelar',
-      confirmButtonColor: '#d33'
-    })
-    if (result.isConfirmed) {
-      dispatch(deleteCharacter({ name: ele.name, userData }))
-    }
-  }, [dispatch, ele.name, userData])
+  const handleDelete = useCallback(
+    async (e) => {
+      e.stopPropagation()
+      const result = await Swal.fire({
+        title: `Eliminar ${ele.name}?`,
+        text: 'Esto eliminará el personaje y todos sus alters.',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Eliminar',
+        cancelButtonText: 'Cancelar',
+        confirmButtonColor: '#d33',
+        background: '#150529', // Púrpura muy oscuro para el fondo
+        color: '#C77DFF', // Lavanda brillante para el texto principal
+        backdrop: `
+        rgba(5, 3, 14, 0.8)  /* Negro espacial con opacidad */
+      `,
+        customClass: {
+          popup: 'custom-swal-popup',
+          title: 'custom-swal-title',
+          content: 'custom-swal-content',
+          confirmButton: 'custom-swal-confirm-button'
+        }
+      })
+      if (result.isConfirmed) {
+        dispatch(deleteCharacter({ name: ele.name, userData }))
+      }
+    },
+    [dispatch, ele.name, userData]
+  )
 
   // Cleanup green color timeout on unmount
   useEffect(() => {

@@ -66,22 +66,36 @@ const PlayerModal = ({ player, alters, onClose }) => {
     }
   }, [playerName, fetchPlayerInfo])
 
-  const handleDeleteAlter = useCallback(async (e, alterName) => {
-    e.stopPropagation()
-    const result = await Swal.fire({
-      title: `Eliminar ${alterName}?`,
-      text: 'Esto eliminará solo este alter.',
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonText: 'Eliminar',
-      cancelButtonText: 'Cancelar',
-      confirmButtonColor: '#d33'
-    })
-    if (result.isConfirmed) {
-      dispatch(deleteAlter({ name: alterName, userData }))
-      onClose()
-    }
-  }, [dispatch, onClose, userData])
+  const handleDeleteAlter = useCallback(
+    async (e, alterName) => {
+      e.stopPropagation()
+      const result = await Swal.fire({
+        title: `Eliminar ${alterName}?`,
+        text: 'Esto eliminará solo este alter.',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Eliminar',
+        cancelButtonText: 'Cancelar',
+        confirmButtonColor: '#d33',
+        background: '#150529', // Púrpura muy oscuro para el fondo
+        color: '#C77DFF', // Lavanda brillante para el texto principal
+        backdrop: `
+        rgba(5, 3, 14, 0.8)  /* Negro espacial con opacidad */
+      `,
+        customClass: {
+          popup: 'custom-swal-popup',
+          title: 'custom-swal-title',
+          content: 'custom-swal-content',
+          confirmButton: 'custom-swal-confirm-button'
+        }
+      })
+      if (result.isConfirmed) {
+        dispatch(deleteAlter({ name: alterName, userData }))
+        onClose()
+      }
+    },
+    [dispatch, onClose, userData]
+  )
 
   const displayPlayerName = playerName || player?.name
 

@@ -37,6 +37,18 @@ const AddDkp = ({ setButtonShowAddDkp }) => {
             const content = Swal.getHtmlContainer()
             if (title) title.style.fontSize = '18px'
             if (content) content.style.fontSize = '20px'
+          },
+          background: '#150529', // Púrpura muy oscuro para el fondo
+          color: '#C77DFF', // Lavanda brillante para el texto principal
+          confirmButtonColor: '#7B2CBF', // Púrpura vibrante para el botón
+          backdrop: `
+        rgba(5, 3, 14, 0.8)  /* Negro espacial con opacidad */
+      `,
+          customClass: {
+            popup: 'custom-swal-popup',
+            title: 'custom-swal-title',
+            content: 'custom-swal-content',
+            confirmButton: 'custom-swal-confirm-button'
           }
         })
         setJsonData(false)
@@ -53,6 +65,18 @@ const AddDkp = ({ setButtonShowAddDkp }) => {
             const content = Swal.getHtmlContainer()
             if (title) title.style.fontSize = '18px'
             if (content) content.style.fontSize = '20px'
+          },
+          background: '#150529', // Púrpura muy oscuro para el fondo
+          color: '#C77DFF', // Lavanda brillante para el texto principal
+          confirmButtonColor: '#7B2CBF', // Púrpura vibrante para el botón
+          backdrop: `
+        rgba(5, 3, 14, 0.8)  /* Negro espacial con opacidad */
+      `,
+          customClass: {
+            popup: 'custom-swal-popup',
+            title: 'custom-swal-title',
+            content: 'custom-swal-content',
+            confirmButton: 'custom-swal-confirm-button'
           }
         })
         setJsonData(false)
@@ -62,7 +86,19 @@ const AddDkp = ({ setButtonShowAddDkp }) => {
         title: 'Something went wrong',
         icon: 'error',
         confirmButtonText: 'Try again',
-        allowOutsideClick: false
+        allowOutsideClick: false,
+        background: '#150529', // Púrpura muy oscuro para el fondo
+        color: '#C77DFF', // Lavanda brillante para el texto principal
+        confirmButtonColor: '#7B2CBF', // Púrpura vibrante para el botón
+        backdrop: `
+        rgba(5, 3, 14, 0.8)  /* Negro espacial con opacidad */
+      `,
+        customClass: {
+          popup: 'custom-swal-popup',
+          title: 'custom-swal-title',
+          content: 'custom-swal-content',
+          confirmButton: 'custom-swal-confirm-button'
+        }
       })
       setJsonData(false)
     }
