@@ -25,16 +25,23 @@ const RowPlayer = ({
       e.stopPropagation()
       const result = await Swal.fire({
         title: `Eliminar ${ele.name}?`,
-        text: 'Esto eliminará el personaje y todos sus alters.',
+        text: `Escribe el nombre "${ele.name}" para confirmar.`,
+        input: 'text',
+        inputPlaceholder: ele.name,
+        inputValidator: (value) => {
+          if (value !== ele.name) {
+            return 'El nombre no coincide'
+          }
+        },
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'Eliminar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: '#d33',
-        background: '#150529', // Púrpura muy oscuro para el fondo
-        color: '#C77DFF', // Lavanda brillante para el texto principal
+        background: '#150529',
+        color: '#C77DFF',
         backdrop: `
-        rgba(5, 3, 14, 0.8)  /* Negro espacial con opacidad */
+        rgba(5, 3, 14, 0.8)
       `,
         customClass: {
           popup: 'custom-swal-popup',

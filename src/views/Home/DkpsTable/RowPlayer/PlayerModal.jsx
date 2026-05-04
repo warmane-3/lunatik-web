@@ -71,16 +71,23 @@ const PlayerModal = ({ player, alters, onClose }) => {
       e.stopPropagation()
       const result = await Swal.fire({
         title: `Eliminar ${alterName}?`,
-        text: 'Esto eliminará solo este alter.',
+        text: `Escribe el nombre "${alterName}" para confirmar.`,
+        input: 'text',
+        inputPlaceholder: alterName,
+        inputValidator: (value) => {
+          if (value !== alterName) {
+            return 'El nombre no coincide'
+          }
+        },
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'Eliminar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: '#d33',
-        background: '#150529', // Púrpura muy oscuro para el fondo
-        color: '#C77DFF', // Lavanda brillante para el texto principal
+        background: '#150529',
+        color: '#C77DFF',
         backdrop: `
-        rgba(5, 3, 14, 0.8)  /* Negro espacial con opacidad */
+        rgba(5, 3, 14, 0.8)
       `,
         customClass: {
           popup: 'custom-swal-popup',
