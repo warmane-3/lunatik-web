@@ -162,7 +162,7 @@ const Rules = memo(() => {
               </div>
             </div>
             <div className='footer-quote'>
-              "Bajo la luna… todos somos LUNATIK." 🌙
+              {`"Bajo la luna… todos somos LUNATIK."`} 🌙
             </div>
           </div>
         </section>
