@@ -11,7 +11,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50709
           },
           {
             "item": "Frozen Bonespike",
@@ -24,7 +25,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50608
           },
           {
             "item": "Bulwark of Smouldering Steel",
@@ -32,7 +34,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50616
           },
           {
             "item": "Gendarme's Cuirass",
@@ -40,7 +43,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50606
           },
           {
             "item": "Rusted Bonespike Pauldrons",
@@ -48,7 +52,8 @@
             "priority": "IGNORE",
             "rank": null,
             "target": null,
-            "comment": "No relevante"
+            "comment": "No relevante",
+            "id": 50617
           },
           {
             "item": "Legguards of Lost Hope",
@@ -56,7 +61,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50612
           },
           {
             "item": "Bracers of Dark Reckoning",
@@ -64,7 +70,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50611
           },
           {
             "item": "Snowserpent Mail Helm",
@@ -72,7 +79,8 @@
             "priority": "IGNORE",
             "rank": null,
             "target": null,
-            "comment": "No relevante"
+            "comment": "No relevante",
+            "id": 50605
           },
           {
             "item": "Frostbitten Fur Boots",
@@ -80,7 +88,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50607
           },
           {
             "item": "Handguards of Winter's Respite",
@@ -88,7 +97,8 @@
             "priority": "IGNORE",
             "rank": null,
             "target": null,
-            "comment": "No relevante"
+            "comment": "No relevante",
+            "id": 50615
           },
           {
             "item": "Crushing Coldwraith Belt",
@@ -102,7 +112,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50613
           },
           {
             "item": "Band of the Bone Colossus",
@@ -110,7 +121,8 @@
             "priority": "PRIORITY",
             "rank": null,
             "target": "DRUID_FERAL",
-            "comment": "Feral prio"
+            "comment": "Feral prio",
+            "id": 50604
           },
           {
             "item": "Loop of the Endless Labyrinth",
@@ -118,7 +130,8 @@
             "priority": "NON_BIS",
             "rank": null,
             "target": null,
-            "comment": "No es bis"
+            "comment": "No es bis",
+            "id": 50614
           },
           {
             "item": "Marrowgar's Frigid Eye",
@@ -126,7 +139,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50610
           },
           {
             "item": "Bone Sentinel's Amulet",
@@ -134,7 +148,8 @@
             "priority": "NON_BIS",
             "rank": null,
             "target": null,
-            "comment": "No es bis"
+            "comment": "No es bis",
+            "id": 50609
           }
         ]
       },
@@ -147,7 +162,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50638
           },
           {
             "item": "Heartpierce",
@@ -155,7 +171,8 @@
             "priority": "IGNORE",
             "rank": null,
             "target": null,
-            "comment": "No relevante"
+            "comment": "No relevante",
+            "id": 50641
           },
           {
             "item": "Nibelung",
@@ -163,7 +180,8 @@
             "priority": "IGNORE",
             "rank": null,
             "target": null,
-            "comment": "No relevante"
+            "comment": "No relevante",
+            "id": 50648
           },
           {
             "item": "Blood-Soaked Saronite Stompers",
@@ -171,7 +189,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50639
           },
           {
             "item": "Fallen Lord's Handguards",
@@ -179,7 +198,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50650
           },
           {
             "item": "Broken Ram Skull Helm",
@@ -187,7 +207,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50640
           },
           {
             "item": "Leggings of Northern Lights",
@@ -195,7 +216,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50645
           },
           {
             "item": "Necrophotic Greaves",
@@ -203,7 +225,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50652
           },
           {
             "item": "Cultist's Bloodsoaked Spaulders",
@@ -211,7 +234,8 @@
             "priority": "IGNORE",
             "rank": null,
             "target": null,
-            "comment": "No relevante"
+            "comment": "No relevante",
+            "id": 50646
           },
           {
             "item": "Deathwhisper Raiment",
@@ -219,7 +243,8 @@
             "priority": "IGNORE",
             "rank": null,
             "target": null,
-            "comment": "No relevante"
+            "comment": "No relevante",
+            "id": 50649
           },
           {
             "item": "Shoulders of Mercy Killing",
@@ -227,7 +252,8 @@
             "priority": "IGNORE",
             "rank": null,
             "target": null,
-            "comment": "No relevante"
+            "comment": "No relevante",
+            "id": 50643
           },
           {
             "item": "The Lady's Brittle Bracers",
@@ -235,7 +261,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50651
           },
           {
             "item": "Ring of Maddening Whispers",
@@ -243,7 +270,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50644
           },
           {
             "item": "Juggernaut Band",
@@ -251,7 +279,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50642
           },
           {
             "item": "Ahn'kahar Onyx Neckguard",
@@ -264,7 +293,8 @@
             "priority": "NON_BIS",
             "rank": null,
             "target": null,
-            "comment": "No es bis"
+            "comment": "No es bis",
+            "id": 50647
           }
         ]
       },
@@ -277,7 +307,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50654
           },
           {
             "item": "Polar Bear Claw Bracers",
@@ -285,7 +316,8 @@
             "priority": "NON_BIS",
             "rank": null,
             "target": null,
-            "comment": "No es bis"
+            "comment": "No es bis",
+            "id": 50659
           },
           {
             "item": "Waistband of Righteous Fury",
@@ -293,7 +325,8 @@
             "priority": "IGNORE",
             "rank": null,
             "target": null,
-            "comment": "No relevante"
+            "comment": "No relevante",
+            "id": 50667
           },
           {
             "item": "Boneguard Commander's Pauldrons",
@@ -301,7 +334,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50660
           },
           {
             "item": "Scourge Hunter's Vambraces",
@@ -309,7 +343,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50655
           },
           {
             "item": "Ikfirus's Sack of Wonder",
@@ -317,7 +352,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50656
           },
           {
             "item": "Boots of Unnatural Growth",
@@ -325,7 +361,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50665
           },
           {
             "item": "Gunship Captain's Mittens",
@@ -333,7 +370,8 @@
             "priority": "BIS",
             "rank": 2,
             "target": null,
-            "comment": "2nd option"
+            "comment": "2nd option",
+            "id": 50663
           },
           {
             "item": "Corp'rethar Ceremonial Crown",
@@ -341,7 +379,8 @@
             "priority": "IGNORE",
             "rank": null,
             "target": null,
-            "comment": "No relevante"
+            "comment": "No relevante",
+            "id": 50661
           },
           {
             "item": "Shadowvault Slayer's Cloak",
@@ -355,7 +394,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50653
           },
           {
             "item": "Skeleton Lord's Circle",
@@ -363,7 +403,8 @@
             "priority": "IGNORE",
             "rank": null,
             "target": null,
-            "comment": "No relevante"
+            "comment": "No relevante",
+            "id": 50657
           },
           {
             "item": "Ring of Rapid Ascent",
@@ -376,7 +417,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50664
           },
           {
             "item": "Amulet of the Silent Eulogy",
@@ -384,7 +426,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50658
           },
           {
             "item": "Althor's Abacus",
@@ -396,7 +439,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50366
           },
           {
             "item": "Corpse Tongue Coin",
@@ -404,7 +448,8 @@
             "priority": "IGNORE",
             "rank": null,
             "target": null,
-            "comment": "No relevante"
+            "comment": "No relevante",
+            "id": 50349
           }
         ]
       },
@@ -417,7 +462,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50672
           },
           {
             "item": "Belt of the Blood Nova",
@@ -425,7 +471,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50671
           },
           {
             "item": "Toskk's Maximized Wristguards",
@@ -433,7 +480,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50670
           },
           {
             "item": "Greatcloak of the Turned Champion",
@@ -441,7 +489,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50668
           },
           {
             "item": "Deathbringer's Will",
@@ -455,7 +504,8 @@
             "priority": "CONDITIONAL",
             "rank": null,
             "target": null,
-            "comment": "Retry con Shadowmourne"
+            "comment": "Retry con Shadowmourne",
+            "id": 50363
           }
         ]
       },
@@ -468,7 +518,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50692
           },
           {
             "item": "Distant Land",
@@ -476,7 +527,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50695
           },
           {
             "item": "Fleshrending Gauntlets",
@@ -484,7 +536,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": "Interpretado desde 'Retry'"
+            "comment": "Interpretado desde 'Retry'",
+            "id": 50690
           },
           {
             "item": "Faceplate of the Forgotten",
@@ -492,7 +545,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": "No confirmado"
+            "comment": "No confirmado",
+            "id": 50701
           },
           {
             "item": "Belt of Broken Bones",
@@ -500,7 +554,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50691
           },
           {
             "item": "Carapace of Forgotten Kings",
@@ -508,7 +563,8 @@
             "priority": "IGNORE",
             "rank": null,
             "target": null,
-            "comment": "No relevante"
+            "comment": "No relevante",
+            "id": 50689
           },
           {
             "item": "Nerub'ar Stalker's Cord",
@@ -516,7 +572,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": "Interpretado desde 'Retry'"
+            "comment": "Interpretado desde 'Retry'",
+            "id": 50688
           },
           {
             "item": "Unclean Surgical Gloves",
@@ -524,7 +581,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50703
           },
           {
             "item": "Horrific Flesh Epaulets",
@@ -532,7 +590,8 @@
             "priority": "IGNORE",
             "rank": null,
             "target": null,
-            "comment": "No relevante"
+            "comment": "No relevante",
+            "id": 50698
           },
           {
             "item": "Gangrenous Leggings",
@@ -540,7 +599,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50697
           },
           {
             "item": "Leather of Stitched Scourge Parts",
@@ -548,7 +608,8 @@
             "priority": "IGNORE",
             "rank": null,
             "target": null,
-            "comment": "No relevante"
+            "comment": "No relevante",
+            "id": 50696
           },
           {
             "item": "Plaguebringer's Stained Pants",
@@ -556,7 +617,8 @@
             "priority": "BIS",
             "rank": 1,
             "target": null,
-            "comment": "1st option"
+            "comment": "1st option",
+            "id": 50694
           },
           {
             "item": "Plague Scientist's Boots",
@@ -564,7 +626,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50699
           },
           {
             "item": "Lingering Illness",
@@ -572,7 +635,8 @@
             "priority": null,
             "rank": 2,
             "target": null,
-            "comment": "2nd option"
+            "comment": "2nd option",
+            "id": 50702
           },
           {
             "item": "Might of Blight",
@@ -580,7 +644,8 @@
             "priority": "BIS",
             "rank": null,
             "target": "DEATHKNIGHT",
-            "comment": "Bis dk"
+            "comment": "Bis dk",
+            "id": 50693
           }
         ]
       },
@@ -593,7 +658,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50684
           },
           {
             "item": "Rot-Resistant Breastplate",
@@ -601,7 +667,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50680
           },
           {
             "item": "Bloodsunder's Bracers",
@@ -609,7 +676,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50687
           },
           {
             "item": "Aldriana's Gloves of Secrecy",
@@ -617,7 +685,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50675
           },
           {
             "item": "Winding Sheet",
@@ -625,7 +694,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50677
           },
           {
             "item": "Seal of Many Mouths",
@@ -633,7 +703,8 @@
             "priority": "PRIORITY",
             "rank": null,
             "target": null,
-            "comment": "No prio"
+            "comment": "No prio",
+            "id": 50678
           },
           {
             "item": "Bile-Encrusted Medallion",
@@ -641,7 +712,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50682
           },
           {
             "item": "Dislodged Foreign Object",
@@ -649,7 +721,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50348
           }
         ]
       },
@@ -662,7 +735,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": "No prio"
+            "comment": "No prio",
+            "id": 50704
           },
           {
             "item": "Astrylian's Sutured Cinch",
@@ -675,7 +749,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50707
           },
           {
             "item": "Professor's Bloodied Smock",
@@ -683,7 +758,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50705
           },
           {
             "item": "Tiny Abomination in a Jar",
@@ -691,7 +767,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50706
           }
         ]
       },
@@ -704,7 +781,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50719
           },
           {
             "item": "Crypt Keeper's Bracers",
@@ -712,7 +790,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": "Prebis"
+            "comment": "Prebis",
+            "id": 50721
           },
           {
             "item": "Sanguine Silk Robes",
@@ -720,7 +799,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50717
           },
           {
             "item": "San'layn Ritualist Gloves",
@@ -728,7 +808,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50722
           },
           {
             "item": "Royal Crimson Cloak",
@@ -736,7 +817,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50718
           },
           {
             "item": "Valanar's Other Signet Ring",
@@ -744,7 +826,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50714
           }
         ]
       },
@@ -757,7 +840,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50729
           },
           {
             "item": "Blood Queen's Crimson Choker",
@@ -765,7 +849,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50182
           }
         ]
       },
@@ -778,7 +863,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": "Spirit > all casters / prebis"
+            "comment": "Spirit > all casters / prebis",
+            "id": 50631
           },
           {
             "item": "Scourge Reaver's Legplates",
@@ -786,7 +872,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50624
           },
           {
             "item": "Coldwraith Links",
@@ -794,7 +881,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50620
           },
           {
             "item": "Grinning Skull Greatboots",
@@ -802,7 +890,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": "Prebis"
+            "comment": "Prebis",
+            "id": 50625
           },
           {
             "item": "Anub'ar Stalker's Gloves",
@@ -810,7 +899,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50619
           },
           {
             "item": "Robe of the Waking Nightmare",
@@ -818,7 +908,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50629
           },
           {
             "item": "Frostbinder's Shredded Cape",
@@ -826,7 +917,8 @@
             "priority": null,
             "rank": null,
             "target": null,
-            "comment": "Prebis"
+            "comment": "Prebis",
+            "id": 50628
           },
           {
             "item": "Frostbrood Sapphire Ring",
@@ -834,7 +926,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": "Arpen"
+            "comment": "Arpen",
+            "id": 50618
           },
           {
             "item": "Devium's Eternally Cold Ring",
@@ -842,7 +935,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50622
           }
         ]
       },
@@ -855,7 +949,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50635
           },
           {
             "item": "Memory of Malygos",
@@ -863,7 +958,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50636
           },
           {
             "item": "Sindragosa's Cruel Claw",
@@ -871,7 +967,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50633
           },
           {
             "item": "Phylactery of the Nameless Lich",
@@ -879,7 +976,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50365
           },
           {
             "item": "Sindragosa's Flawless Fang",
@@ -887,206 +985,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
-          },
-          {
-            "name": "THE_LICH_KING",
-            "items": [
-              {
-                "item": "Havoc's Call, Blade of Lordaeron Kings",
-                "classes": ["ROGUE", "DEATHKNIGHT_FROST", "PALADIN_PROTECTION"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Fal'inrush, Defender of Quel'thalas",
-                "classes": ["HUNTER", "ROGUE", "WARRIOR"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Royal Scepter of Terenas II",
-                "classes": ["PRIEST", "DRUID", "SHAMAN_RESTORATION"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Oathbinder, Charge of the Ranger-General",
-                "classes": ["DRUID_FERAL", "HUNTER"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Bloodsurge, Kel'Thuzad's Blade of Agony",
-                "classes": ["MAGE", "WARLOCK", "PALADIN_HOLY"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Glorenzelg, High-Blade of the Silver Hand",
-                "classes": ["WARRIOR", "DEATHKNIGHT_BLOOD"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Mithrios, Bronzebeard's Legacy",
-                "classes": ["TANK"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": "Opcional"
-              }
-            ]
-          },
-          {
-            "name": "HALION",
-            "items": [
-              {
-                "item": "Apocalypse's Advance",
-                "classes": ["WARRIOR", "DEATHKNIGHT", "PALADIN_RETRIBUTION"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Bracers of Fiery Night",
-                "classes": ["CASTER", "PRIEST_DISCIPLINE"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Charred Twilight Scale",
-                "classes": ["CASTER"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Cloak of Burning Dusk",
-                "classes": ["HEALER", "CASTER"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Foreshadow Steps",
-                "classes": ["PALADIN_HOLY"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Glowing Twilight Scale",
-                "classes": ["HEALER"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Penumbra Pendant",
-                "classes": ["WARRIOR", "DEATHKNIGHT", "PALADIN_RETRIBUTION"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Petrified Twilight Scale",
-                "classes": ["TANK"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Phaseshifter's Bracers",
-                "classes": ["HEALER"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Returning Footfalls",
-                "classes": ["HUNTER"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Ring of Phased Regeneration",
-                "classes": ["HEALER"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Sharpened Twilight Scale",
-                "classes": ["MELEE", "HUNTER"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": "All melees + hunt"
-              },
-              {
-                "item": "Signet of Twilight",
-                "classes": ["ROGUE", "PALADIN_RETRIBUTION", "DRUID_FERAL"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Split Shape Belt",
-                "classes": ["SHAMAN_RESTORATION", "PALADIN_HOLY"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Treads of Impending Resurrection",
-                "classes": ["TANK"],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              },
-              {
-                "item": "Umbrage Armbands",
-                "classes": [
-                  "ROGUE",
-                  "PALADIN_RETRIBUTION",
-                  "WARRIOR",
-                  "DEATHKNIGHT_UNHOLY"
-                ],
-                "priority": "BIS",
-                "rank": null,
-                "target": null,
-                "comment": null
-              }
-            ]
+            "comment": null,
+            "id": 50364
           }
         ]
       },
@@ -1099,7 +999,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50737
           },
           {
             "item": "Fal'inrush, Defender of Quel'thalas",
@@ -1107,7 +1008,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50733
           },
           {
             "item": "Royal Scepter of Terenas II",
@@ -1115,7 +1017,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50734
           },
           {
             "item": "Oathbinder, Charge of the Ranger-General",
@@ -1123,7 +1026,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50735
           },
           {
             "item": "Bloodsurge, Kel'Thuzad's Blade of Agony",
@@ -1131,7 +1035,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50732
           },
           {
             "item": "Glorenzelg, High-Blade of the Silver Hand",
@@ -1139,7 +1044,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 50730
           },
           {
             "item": "Mithrios, Bronzebeard's Legacy",
@@ -1147,7 +1053,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": "Opcional"
+            "comment": "Opcional",
+            "id": 50738
           }
         ]
       }
@@ -1165,7 +1072,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 54578
           },
           {
             "item": "Bracers of Fiery Night",
@@ -1173,7 +1081,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 54582
           },
           {
             "item": "Charred Twilight Scale",
@@ -1181,7 +1090,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 54588
           },
           {
             "item": "Cloak of Burning Dusk",
@@ -1189,7 +1099,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 54583
           },
           {
             "item": "Foreshadow Steps",
@@ -1197,7 +1108,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 54586
           },
           {
             "item": "Glowing Twilight Scale",
@@ -1205,7 +1117,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 54573
           },
           {
             "item": "Penumbra Pendant",
@@ -1213,7 +1126,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 54581
           },
           {
             "item": "Petrified Twilight Scale",
@@ -1221,7 +1135,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 54591
           },
           {
             "item": "Phaseshifter's Bracers",
@@ -1229,7 +1144,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 54584
           },
           {
             "item": "Returning Footfalls",
@@ -1237,7 +1153,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 54577
           },
           {
             "item": "Ring of Phased Regeneration",
@@ -1245,7 +1162,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 54585
           },
           {
             "item": "Sharpened Twilight Scale",
@@ -1253,7 +1171,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": "All melees + hunt"
+            "comment": "All melees + hunt",
+            "id": 54590
           },
           {
             "item": "Signet of Twilight",
@@ -1261,7 +1180,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 54576
           },
           {
             "item": "Split Shape Belt",
@@ -1269,7 +1189,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 54587
           },
           {
             "item": "Treads of Impending Resurrection",
@@ -1277,7 +1198,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 54579
           },
           {
             "item": "Umbrage Armbands",
@@ -1290,7 +1212,8 @@
             "priority": "BIS",
             "rank": null,
             "target": null,
-            "comment": null
+            "comment": null,
+            "id": 54580
           }
         ]
       }

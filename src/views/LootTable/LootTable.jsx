@@ -112,7 +112,7 @@ const LootTable = memo(() => {
     })
 
     return {
-      bosses: bosses.sort(),
+      bosses,
       classes: Array.from(classes).sort(),
       priorities: Array.from(priorities).sort()
     }
@@ -289,7 +289,12 @@ const LootTable = memo(() => {
                           <td className='item-name'>
                             <div className='flex items-center gap-2'>
                               <FaTrophy className='text-accent-cyan shrink-0' />
-                              <span>{item.item}</span>
+                              <a
+                                href={`https://wotlk.ultimowow.com?item=${item.id}`}
+                                target='_blank'
+                              >
+                                {item.item}
+                              </a>
                             </div>
                           </td>
                           <td className='item-classes'>
