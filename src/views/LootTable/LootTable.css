@@ -296,6 +296,10 @@
   gap: 6px;
 }
 
+.item-name a {
+  color: #872ec7;
+}
+
 .class-tag {
   background: rgba(255, 255, 255, 0.05);
   color: #cbd5e1;

@@ -160,6 +160,12 @@ const LootTable = memo(() => {
     selectedPriority
   ])
 
+  useEffect(() => {
+    if (window.$WowheadPower) {
+      window.$WowheadPower.refreshLinks()
+    }
+  }, [filteredBosses])
+
   const resetFilters = () => {
     setSearchTerm('')
     setSelectedBoss('ALL')
