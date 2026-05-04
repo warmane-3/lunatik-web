@@ -7,6 +7,7 @@ import {
   deleteAdmin
 } from '../../redux/actions/actionsCharacters'
 import Swal from 'sweetalert2'
+import { MdVisibility, MdVisibilityOff } from 'react-icons/md'
 import './Admin.css'
 
 const Admin = () => {
@@ -20,6 +21,7 @@ const Admin = () => {
     email: ''
   })
   const [editingUsername, setEditingUsername] = useState(null)
+  const [showPassword, setShowPassword] = useState(false)
 
   useEffect(() => {
     dispatch(getAdmins(userData))
@@ -176,17 +178,26 @@ const Admin = () => {
               <label htmlFor='password'>
                 {editingUsername ? 'Nueva Contraseña:' : 'Password:'}
               </label>
-              <input
-                id='password'
-                name='password'
-                type='password'
-                value={formData.password}
-                onChange={handleInputChange}
-                placeholder={
-                  editingUsername ? 'Dejar vacío para no cambiar' : 'Contraseña'
-                }
-                required={!editingUsername}
-              />
+              <div className='password-wrapper'>
+                <input
+                  id='password'
+                  name='password'
+                  type={showPassword ? 'text' : 'password'}
+                  value={formData.password}
+                  onChange={handleInputChange}
+                  placeholder={
+                    editingUsername ? 'Dejar vacío para no cambiar' : 'Contraseña'
+                  }
+                  required={!editingUsername}
+                />
+                <button
+                  type='button'
+                  className='password-toggle'
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <MdVisibilityOff /> : <MdVisibility />}
+                </button>
+              </div>
             </div>
             <div className='form-group'>
               <label htmlFor='email'>Email:</label>
