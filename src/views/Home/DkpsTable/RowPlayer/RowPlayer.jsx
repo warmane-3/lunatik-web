@@ -1,5 +1,8 @@
 import { useState, useCallback, useEffect, useRef, memo } from 'react'
 import { selectColor } from '../DkpsTable.service'
+import { useDispatch, useSelector } from 'react-redux'
+import { deleteCharacter } from '../../../../redux/actions/actionsCharacters'
+import Swal from 'sweetalert2'
 import './RowPlayer.css'
 
 const RowPlayer = ({
@@ -13,6 +16,24 @@ const RowPlayer = ({
 }) => {
   const [color, setColor] = useState(i % 2 !== 0 ? '#86868623' : '')
   const greenColorTimeoutRef = useRef(null)
+  const dispatch = useDispatch()
+  const user = useSelector((state) => state.user.userState.user)
+
+  const handleDelete = useCallback(async (e) => {
+    e.stopPropagation()
+    const result = await Swal.fire({
+      title: `Eliminar ${ele.name}?`,
+      text: 'Esto eliminará el personaje y todos sus alters.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Eliminar',
+      cancelButtonText: 'Cancelar',
+      confirmButtonColor: '#d33'
+    })
+    if (result.isConfirmed) {
+      dispatch(deleteCharacter(ele.name))
+    }
+  }, [dispatch, ele.name])
 
   // Cleanup green color timeout on unmount
   useEffect(() => {
@@ -84,7 +105,18 @@ const RowPlayer = ({
       role='button'
       tabIndex={0}
     >
-      <h1 style={{ color: selectColor(ele.class, ele) }}>{ele.name}</h1>
+      <h1 style={{ color: selectColor(ele.class, ele) }}>
+        {ele.name}
+        {user && (
+          <button
+            className='delete-player-btn'
+            onClick={handleDelete}
+            title='Eliminar personaje y alters'
+          >
+            ×
+          </button>
+        )}
+      </h1>
       <h1 style={{ color: selectColor(ele.class) }}>{ele.class}</h1>
       <h1 style={{ color: selectColor(ele.class) }}>{ele.rank}</h1>
       <h1 style={{ color: selectColor(ele.class) }}>{ele.net}</h1>

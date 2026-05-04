@@ -3,7 +3,9 @@ import {
   getActual,
   getFirst,
   getMainAndAlters,
-  getSecond
+  getSecond,
+  deleteCharacter,
+  deleteAlter
 } from '../actions/actionsCharacters'
 
 const initialState = {
@@ -99,6 +101,29 @@ export const playerSlice = createSlice({
       .addCase(getSecond.rejected, (state, action) => {
         state.loader = false
         state.error = action.error.message
+      })
+      .addCase(deleteCharacter.pending, (state) => {
+        state.loader = true
+      })
+      .addCase(deleteCharacter.fulfilled, (state, action) => {
+        state.loader = false
+        state.mains = state.mains.filter((m) => m.name !== action.payload.name)
+        state.alters = state.alters.filter((a) => a.mainPlayername !== action.payload.name)
+      })
+      .addCase(deleteCharacter.rejected, (state, action) => {
+        state.loader = false
+        state.error = action.payload
+      })
+      .addCase(deleteAlter.pending, (state) => {
+        state.loader = true
+      })
+      .addCase(deleteAlter.fulfilled, (state, action) => {
+        state.loader = false
+        state.alters = state.alters.filter((a) => a.name !== action.payload.name)
+      })
+      .addCase(deleteAlter.rejected, (state, action) => {
+        state.loader = false
+        state.error = action.payload
       })
   }
 })

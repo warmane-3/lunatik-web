@@ -270,6 +270,33 @@
   transform: translateX(5px);
 }
 
+.delete-alter-btn {
+  margin-left: auto;
+  background: #7f1d1d;
+  border: 1px solid #ef4444;
+  color: #f8fafc;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.rowplayer-alters h3:hover .delete-alter-btn {
+  opacity: 1;
+}
+
+.delete-alter-btn:hover {
+  background: #991b1b;
+  transform: scale(1.1);
+}
+
 /* Loader scanning */
 .scanning-circle {
   width: 30px;

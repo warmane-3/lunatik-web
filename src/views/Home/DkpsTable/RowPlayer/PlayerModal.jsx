@@ -2,11 +2,16 @@ import { useCallback, useEffect, useRef, memo, useState } from 'react'
 import { selectColor } from '../DkpsTable.service'
 import { itemsLeft, itemsBottom, itemsRight } from './RowTables.service'
 import { usePlayerInfo } from './usePlayerInfo'
+import { useDispatch, useSelector } from 'react-redux'
+import { deleteAlter } from '../../../../redux/actions/actionsCharacters'
+import Swal from 'sweetalert2'
 import './RowPlayer.css'
 
 const PlayerModal = ({ player, alters, onClose }) => {
   const [percent, setPercent] = useState(0)
   const modalRef = useRef(null)
+  const dispatch = useDispatch()
+  const user = useSelector((state) => state.user.userState.user)
   const {
     scanning,
     playerName,
@@ -59,6 +64,23 @@ const PlayerModal = ({ player, alters, onClose }) => {
       fetchPlayerInfo(playerName)
     }
   }, [playerName, fetchPlayerInfo])
+
+  const handleDeleteAlter = useCallback(async (e, alterName) => {
+    e.stopPropagation()
+    const result = await Swal.fire({
+      title: `Eliminar ${alterName}?`,
+      text: 'Esto eliminará solo este alter.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Eliminar',
+      cancelButtonText: 'Cancelar',
+      confirmButtonColor: '#d33'
+    })
+    if (result.isConfirmed) {
+      dispatch(deleteAlter(alterName))
+      onClose()
+    }
+  }, [dispatch, onClose])
 
   const displayPlayerName = playerName || player?.name
 
@@ -145,6 +167,15 @@ const PlayerModal = ({ player, alters, onClose }) => {
                     style={{ '--class-color': selectColor(elemento.class) }}
                   >
                     {elemento.name}
+                    {user && (
+                      <button
+                        className='delete-alter-btn'
+                        onClick={(e) => handleDeleteAlter(e, elemento.name)}
+                        title='Eliminar alter'
+                      >
+                        ×
+                      </button>
+                    )}
                   </h3>
                 )
               })}

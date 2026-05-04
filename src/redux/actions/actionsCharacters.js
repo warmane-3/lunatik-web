@@ -73,3 +73,39 @@ export const getSecond = createAsyncThunk(
     }
   }
 )
+
+export const deleteCharacter = createAsyncThunk(
+  'players/deleteCharacter',
+  async (name, thunkAPI) => {
+    try {
+      const response = await fetch(`${API}/characters/${name}`, {
+        method: 'DELETE'
+      })
+      const data = await response.json()
+      if (!response.ok) {
+        return thunkAPI.rejectWithValue(data.error)
+      }
+      return { name, message: data.message }
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message)
+    }
+  }
+)
+
+export const deleteAlter = createAsyncThunk(
+  'players/deleteAlter',
+  async (name, thunkAPI) => {
+    try {
+      const response = await fetch(`${API}/alter/${name}`, {
+        method: 'DELETE'
+      })
+      const data = await response.json()
+      if (!response.ok) {
+        return thunkAPI.rejectWithValue(data.error)
+      }
+      return { name, message: data.message }
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message)
+    }
+  }
+)
