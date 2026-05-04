@@ -81,19 +81,17 @@ const NavBar = () => {
         <div className='flex items-center gap-2'>
           {isLoggedIn ? (
             <div className='flex items-center gap-2'>
+              <Link to='/admin' onClick={scrollToTop}>
+                <button className='flex min-w-21 max-w-120 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#a855f7]  text-white text-sm hover:text-[#a855f7] font-bold leading-normal tracking-[0.015em] hover:bg-white transition-colors max-md:hidden'>
+                  Admin Panel
+                </button>
+              </Link>
               <button
                 onClick={handleLogout}
                 className='flex min-w-21 max-w-120 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-red-600/80 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-red-600 transition-colors'
               >
                 <span className='truncate'>Logout</span>
               </button>
-              <Link
-                to='/admin'
-                onClick={scrollToTop}
-                className='text-sm font-medium leading-normal text-white/80 hover:text-white'
-              >
-                ADMIN PANEL
-              </Link>
             </div>
           ) : (
             <Link
@@ -130,18 +128,7 @@ const NavBar = () => {
             >
               HOME
             </Link>
-            {isLoggedIn && (
-              <Link
-                to='/admin'
-                onClick={() => {
-                  closeMenu()
-                  scrollToTop()
-                }}
-                className='text-sm font-medium leading-normal text-white/80 hover:text-white py-2'
-              >
-                ADMIN
-              </Link>
-            )}
+
             <Link
               to='/rules'
               onClick={() => {
@@ -172,6 +159,18 @@ const NavBar = () => {
             >
               SISTEMA DKP
             </Link>
+            {isLoggedIn && (
+              <Link
+                to='/admin'
+                onClick={() => {
+                  closeMenu()
+                  scrollToTop()
+                }}
+                className='text-sm font-medium leading-normal text-white/80 hover:text-white py-2'
+              >
+                Admin Panel
+              </Link>
+            )}
           </div>
         </div>
       )}

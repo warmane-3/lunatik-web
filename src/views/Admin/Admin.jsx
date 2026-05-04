@@ -12,7 +12,10 @@ import './Admin.css'
 
 const Admin = () => {
   const dispatch = useDispatch()
+  const user = useSelector((state) => state.user.userState.user)
   const userData = useSelector((state) => state.user.userState.userData)
+  console.log('user and userData', user, userData)
+
   const { admins, loader } = useSelector((state) => state.players)
 
   const [formData, setFormData] = useState({
@@ -24,10 +27,8 @@ const Admin = () => {
   const [showPassword, setShowPassword] = useState(false)
 
   useEffect(() => {
-    console.log('dispatch run')
-
     dispatch(getAdmins(userData))
-  }, [])
+  }, [dispatch, userData])
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -155,7 +156,8 @@ const Admin = () => {
 
   return (
     <div className='admin-container'>
-      <h1>Administración de Administradores</h1>
+      <h1>Administración de Usuarios Admin</h1>
+      <h2>{userData.user}</h2>
 
       <div className='admin-content'>
         <div className='admin-form-section'>
