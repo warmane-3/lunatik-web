@@ -122,6 +122,7 @@ const DkpsTable = ({ showAddDKP, setButtonShowAddDkp, onPlayerSelect }) => {
         setButtonShowAddDkp={setButtonShowAddDkp}
         showAddDKP={showAddDKP}
         players={mains}
+        alters={alters}
         onPlayerClick={scrollToPlayer}
         setRenderData={setRenderData}
       />

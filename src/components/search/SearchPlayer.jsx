@@ -9,6 +9,7 @@ import {
 
 const SearchPlayer = ({
   players,
+  alters,
   onPlayerClick,
   setButtonShowAddDkp
 }) => {
@@ -74,9 +75,28 @@ const SearchPlayer = ({
     }
     let primeraLetra = e.target.value.charAt(0).toUpperCase()
     let restoDelInput = e.target.value.slice(1)
-    const resultado = players
+    let resultado = players
       .filter((ele) => ele.name.startsWith(primeraLetra + restoDelInput))
       .slice(0, 10)
+
+    const mainNamesSet = new Set(resultado.map((p) => p.name))
+
+    if (alters && alters.length > 0) {
+      const alterMatches = alters
+        .filter((ele) => ele.name.startsWith(primeraLetra + restoDelInput))
+        .map((alter) => alter.mainPlayername)
+        .filter((mainName) => mainName && !mainNamesSet.has(mainName))
+        .slice(0, 10 - resultado.length)
+
+      alterMatches.forEach((mainName) => {
+        const mainPlayer = players.find((p) => p.name === mainName)
+        if (mainPlayer) {
+          resultado.push(mainPlayer)
+          mainNamesSet.add(mainName)
+        }
+      })
+    }
+
     setFound(resultado)
     setInputValue(e.target.value)
     setSelectedIndex(-1)
