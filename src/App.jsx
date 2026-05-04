@@ -5,8 +5,8 @@ import NavBar from './components/Navbar/NavBar'
 import Login from './components/Login/Login'
 import ForgotPassword from './views/Login/ForgotPassword'
 import Admin from './views/Admin/Admin'
+import NotFound from './views/NotFound/NotFound'
 import { useState } from 'react'
-import Register from './components/Register/Register'
 import ItemBis from './views/ItemsBis/ItemsBis'
 import Rules from './views/Rules/Rules'
 import LootTable from './views/LootTable/LootTable'
@@ -19,7 +19,7 @@ const App = () => {
   console.log(pathname)
   return (
     <div className='App flex flex-col min-h-screen'>
-      {pathname !== '/register' && pathname !== '/login' && pathname !== '/login/forgot-password' && <NavBar />}
+      {pathname !== '/login/forgot-password' && <NavBar />}
       <main className='flex-1'>
         <Routes>
           <Route path='/' element={<Home showAddDKP={showAddDKP} />} />
@@ -27,14 +27,7 @@ const App = () => {
             path='/login'
             element={<Login setShowAddDkp={setShowAddDkp} />}
           />
-          <Route
-            path='/login/forgot-password'
-            element={<ForgotPassword />}
-          />
-          <Route
-            path='/register'
-            element={<Register setShowAddDkp={setShowAddDkp} />}
-          />
+          <Route path='/login/forgot-password' element={<ForgotPassword />} />
           <Route
             path='/itembis/*'
             element={<ItemBis setShowAddDkp={setShowAddDkp} />}
@@ -43,9 +36,12 @@ const App = () => {
           <Route path='/loottable' element={<LootTable />} />
           <Route path='/lootrules' element={<LootRules />} />
           <Route path='/admin' element={<Admin />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </main>
-      {pathname !== '/login' && pathname !== '/register' && pathname !== '/login/forgot-password' && <Footer />}
+      {pathname !== '/login' &&
+        pathname !== '/register' &&
+        pathname !== '/login/forgot-password' && <Footer />}
     </div>
   )
 }

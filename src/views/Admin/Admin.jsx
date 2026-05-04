@@ -174,7 +174,7 @@ const Admin = () => {
                 value={editingUsername || formData.username}
                 onChange={handleInputChange}
                 placeholder='Nombre de usuario'
-                disabled={!!editingUsername || userData.username !== 'Lunatik'}
+                disabled={!!editingUsername || userData.user !== 'Lunatik'}
                 required={!editingUsername}
                 autoComplete='username'
               />
@@ -197,7 +197,7 @@ const Admin = () => {
                   }
                   required={!editingUsername}
                   autoComplete='new-password'
-                  disabled={userData.username !== 'Lunatik'}
+                  disabled={userData.user !== 'Lunatik'}
                 />
                 <button
                   type='button'
@@ -219,14 +219,14 @@ const Admin = () => {
                 placeholder='Email del administrador'
                 autoComplete='email'
                 required={!editingUsername}
-                disabled={userData.username !== 'Lunatik'}
+                disabled={userData.user !== 'Lunatik'}
               />
             </div>
             <div className='form-buttons'>
               <button
                 type='submit'
                 className='btn-submit'
-                disabled={loader || userData.username !== 'Lunatik'}
+                disabled={loader || userData.user !== 'Lunatik'}
               >
                 {loader
                   ? 'Procesando...'
@@ -262,7 +262,7 @@ const Admin = () => {
                       <span className='admin-username'>{admin.username}</span>
                       <span className='admin-email'>{admin.email}</span>
                     </div>
-                    {userData.username === 'Lunatik' && (
+                    {userData.user === 'Lunatik' && (
                       <div className='admin-actions'>
                         <button
                           className='btn-edit'
