@@ -126,10 +126,12 @@ export const getAdmins = createAsyncThunk(
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(userData)
+        }
       })
+      console.log('getAdmins', response)
+
       const data = await response.json()
+      console.log('getAdmins', data)
       if (!response.ok) {
         return thunkAPI.rejectWithValue(data.error)
       }

@@ -24,8 +24,10 @@ const Admin = () => {
   const [showPassword, setShowPassword] = useState(false)
 
   useEffect(() => {
+    console.log('dispatch run')
+
     dispatch(getAdmins(userData))
-  }, [dispatch, userData])
+  }, [])
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -170,8 +172,9 @@ const Admin = () => {
                 value={editingUsername || formData.username}
                 onChange={handleInputChange}
                 placeholder='Nombre de usuario'
-                disabled={!!editingUsername}
+                disabled={!!editingUsername || userData.username !== 'Lunatik'}
                 required={!editingUsername}
+                autoComplete='username'
               />
             </div>
             <div className='form-group'>
@@ -186,9 +189,13 @@ const Admin = () => {
                   value={formData.password}
                   onChange={handleInputChange}
                   placeholder={
-                    editingUsername ? 'Dejar vacío para no cambiar' : 'Contraseña'
+                    editingUsername
+                      ? 'Dejar vacío para no cambiar'
+                      : 'Contraseña'
                   }
                   required={!editingUsername}
+                  autoComplete='new-password'
+                  disabled={userData.username !== 'Lunatik'}
                 />
                 <button
                   type='button'
@@ -208,10 +215,17 @@ const Admin = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 placeholder='Email del administrador'
+                autoComplete='email'
+                required={!editingUsername}
+                disabled={userData.username !== 'Lunatik'}
               />
             </div>
             <div className='form-buttons'>
-              <button type='submit' className='btn-submit' disabled={loader}>
+              <button
+                type='submit'
+                className='btn-submit'
+                disabled={loader || userData.username !== 'Lunatik'}
+              >
                 {loader
                   ? 'Procesando...'
                   : editingUsername
@@ -246,20 +260,22 @@ const Admin = () => {
                       <span className='admin-username'>{admin.username}</span>
                       <span className='admin-email'>{admin.email}</span>
                     </div>
-                    <div className='admin-actions'>
-                      <button
-                        className='btn-edit'
-                        onClick={() => handleEdit(admin)}
-                      >
-                        Editar
-                      </button>
-                      <button
-                        className='btn-delete'
-                        onClick={() => handleDelete(admin.username)}
-                      >
-                        Eliminar
-                      </button>
-                    </div>
+                    {userData.username === 'Lunatik' && (
+                      <div className='admin-actions'>
+                        <button
+                          className='btn-edit'
+                          onClick={() => handleEdit(admin)}
+                        >
+                          Editar
+                        </button>
+                        <button
+                          className='btn-delete'
+                          onClick={() => handleDelete(admin.username)}
+                        >
+                          Eliminar
+                        </button>
+                      </div>
+                    )}
                   </div>
                 ))
               ) : (
