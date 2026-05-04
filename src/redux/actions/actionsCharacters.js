@@ -117,3 +117,91 @@ export const deleteAlter = createAsyncThunk(
     }
   }
 )
+
+export const getAdmins = createAsyncThunk(
+  'players/getAdmins',
+  async (userData, thunkAPI) => {
+    try {
+      const response = await fetch(`${API}/admin`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userData)
+      })
+      const data = await response.json()
+      if (!response.ok) {
+        return thunkAPI.rejectWithValue(data.error)
+      }
+      return data
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message)
+    }
+  }
+)
+
+export const createAdmin = createAsyncThunk(
+  'players/createAdmin',
+  async ({ newAdmin, userData }, thunkAPI) => {
+    try {
+      const response = await fetch(`${API}/admin`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ ...newAdmin, ...userData })
+      })
+      const data = await response.json()
+      if (!response.ok) {
+        return thunkAPI.rejectWithValue(data.error)
+      }
+      return data
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message)
+    }
+  }
+)
+
+export const updateAdmin = createAsyncThunk(
+  'players/updateAdmin',
+  async ({ username, updates, userData }, thunkAPI) => {
+    try {
+      const response = await fetch(`${API}/admin/${username}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ ...updates, ...userData })
+      })
+      const data = await response.json()
+      if (!response.ok) {
+        return thunkAPI.rejectWithValue(data.error)
+      }
+      return { username, ...data }
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message)
+    }
+  }
+)
+
+export const deleteAdmin = createAsyncThunk(
+  'players/deleteAdmin',
+  async ({ username, userData }, thunkAPI) => {
+    try {
+      const response = await fetch(`${API}/admin/${username}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userData)
+      })
+      const data = await response.json()
+      if (!response.ok) {
+        return thunkAPI.rejectWithValue(data.error)
+      }
+      return { username, message: data.message }
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message)
+    }
+  }
+)

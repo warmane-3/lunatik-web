@@ -2,12 +2,14 @@ import { useState, useRef } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { API } from '../Home/DkpsTable/DkpsTable.service'
 import Swal from 'sweetalert2'
+import { MdVisibility, MdVisibilityOff } from 'react-icons/md'
 import './ForgotPassword.css'
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('')
   const [token, setToken] = useState(['', '', '', '', '', ''])
   const [newPassword, setNewPassword] = useState('')
+  const [showPassword, setShowPassword] = useState(false)
   const [step, setStep] = useState(1)
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
@@ -265,14 +267,23 @@ const ForgotPassword = () => {
             </div>
             <div className='forgot-password-input'>
               <label htmlFor='newPassword'>Nueva Contraseña:</label>
-              <input
-                id='newPassword'
-                type='password'
-                value={newPassword}
-                onChange={(e) => setNewPassword(e.target.value)}
-                placeholder='Nueva contraseña'
-                required
-              />
+              <div className='password-wrapper'>
+                <input
+                  id='newPassword'
+                  type={showPassword ? 'text' : 'password'}
+                  value={newPassword}
+                  onChange={(e) => setNewPassword(e.target.value)}
+                  placeholder='Nueva contraseña'
+                  required
+                />
+                <button
+                  type='button'
+                  className='password-toggle'
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <MdVisibilityOff /> : <MdVisibility />}
+                </button>
+              </div>
             </div>
           </>
         )}

@@ -5,12 +5,17 @@ import {
   getMainAndAlters,
   getSecond,
   deleteCharacter,
-  deleteAlter
+  deleteAlter,
+  getAdmins,
+  createAdmin,
+  updateAdmin,
+  deleteAdmin
 } from '../actions/actionsCharacters'
 
 const initialState = {
   mains: [],
   alters: [],
+  admins: [],
   error: '',
   loader: false,
   date: ''
@@ -122,6 +127,49 @@ export const playerSlice = createSlice({
         state.alters = state.alters.filter((a) => a.name !== action.payload.name)
       })
       .addCase(deleteAlter.rejected, (state, action) => {
+        state.loader = false
+        state.error = action.payload
+      })
+      .addCase(getAdmins.pending, (state) => {
+        state.loader = true
+      })
+      .addCase(getAdmins.fulfilled, (state, action) => {
+        state.loader = false
+        state.admins = action.payload
+      })
+      .addCase(getAdmins.rejected, (state, action) => {
+        state.loader = false
+        state.error = action.payload
+      })
+      .addCase(createAdmin.pending, (state) => {
+        state.loader = true
+      })
+      .addCase(createAdmin.fulfilled, (state, action) => {
+        state.loader = false
+        state.admins.push(action.payload)
+      })
+      .addCase(createAdmin.rejected, (state, action) => {
+        state.loader = false
+        state.error = action.payload
+      })
+      .addCase(updateAdmin.pending, (state) => {
+        state.loader = true
+      })
+      .addCase(updateAdmin.fulfilled, (state) => {
+        state.loader = false
+      })
+      .addCase(updateAdmin.rejected, (state, action) => {
+        state.loader = false
+        state.error = action.payload
+      })
+      .addCase(deleteAdmin.pending, (state) => {
+        state.loader = true
+      })
+      .addCase(deleteAdmin.fulfilled, (state, action) => {
+        state.loader = false
+        state.admins = state.admins.filter((a) => a.username !== action.payload.username)
+      })
+      .addCase(deleteAdmin.rejected, (state, action) => {
         state.loader = false
         state.error = action.payload
       })

@@ -20,7 +20,7 @@ const NavBar = () => {
 
   const handleLogout = () => {
     dispatch(logoutUser())
-    dispatch(setUserData({user: "", password: ""}))
+    dispatch(setUserData({ user: '', password: '' }))
     navigate('/')
   }
 
@@ -54,7 +54,6 @@ const NavBar = () => {
           >
             HOME
           </Link>
-
           <Link
             to='/loottable'
             onClick={scrollToTop}
@@ -81,12 +80,21 @@ const NavBar = () => {
         {/* Right side: Login + Hamburger */}
         <div className='flex items-center gap-2'>
           {isLoggedIn ? (
-            <button
-              onClick={handleLogout}
-              className='flex min-w-21 max-w-120 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-red-600/80 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-red-600 transition-colors'
-            >
-              <span className='truncate'>Logout</span>
-            </button>
+            <div className='flex items-center gap-2'>
+              <button
+                onClick={handleLogout}
+                className='flex min-w-21 max-w-120 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-red-600/80 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-red-600 transition-colors'
+              >
+                <span className='truncate'>Logout</span>
+              </button>
+              <Link
+                to='/admin'
+                onClick={scrollToTop}
+                className='text-sm font-medium leading-normal text-white/80 hover:text-white'
+              >
+                ADMIN PANEL
+              </Link>
+            </div>
           ) : (
             <Link
               to='/login'
@@ -122,6 +130,18 @@ const NavBar = () => {
             >
               HOME
             </Link>
+            {isLoggedIn && (
+              <Link
+                to='/admin'
+                onClick={() => {
+                  closeMenu()
+                  scrollToTop()
+                }}
+                className='text-sm font-medium leading-normal text-white/80 hover:text-white py-2'
+              >
+                ADMIN
+              </Link>
+            )}
             <Link
               to='/rules'
               onClick={() => {

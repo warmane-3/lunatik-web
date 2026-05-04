@@ -4,6 +4,7 @@ import { Route, Routes, useLocation } from 'react-router'
 import NavBar from './components/Navbar/NavBar'
 import Login from './components/Login/Login'
 import ForgotPassword from './views/Login/ForgotPassword'
+import Admin from './views/Admin/Admin'
 import { useState } from 'react'
 import Register from './components/Register/Register'
 import ItemBis from './views/ItemsBis/ItemsBis'
@@ -41,6 +42,7 @@ const App = () => {
           <Route path='/rules' element={<Rules />} />
           <Route path='/loottable' element={<LootTable />} />
           <Route path='/lootrules' element={<LootRules />} />
+          <Route path='/admin' element={<Admin />} />
         </Routes>
       </main>
       {pathname !== '/login' && pathname !== '/register' && pathname !== '/login/forgot-password' && <Footer />}
