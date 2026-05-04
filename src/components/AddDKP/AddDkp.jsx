@@ -28,16 +28,30 @@ const AddDkp = ({ setButtonShowAddDkp }) => {
           title: 'DKPs update successfull',
           icon: 'success',
           confirmButtonText: 'Continue',
-          allowOutsideClick: false
+          allowOutsideClick: false,
+          didOpen: () => {
+            // Seleccionar y modificar directamente los elementos
+            const title = Swal.getTitle()
+            const content = Swal.getHtmlContainer()
+            if (title) title.style.fontSize = '18px'
+            if (content) content.style.fontSize = '20px'
+          }
         })
         setJsonData(false)
         setXmlData('')
       } else {
         await Swal.fire({
-          title: 'Something went wrong',
+          title: result.error,
           icon: 'error',
           confirmButtonText: 'Try again',
-          allowOutsideClick: false
+          allowOutsideClick: false,
+          didOpen: () => {
+            // Seleccionar y modificar directamente los elementos
+            const title = Swal.getTitle()
+            const content = Swal.getHtmlContainer()
+            if (title) title.style.fontSize = '18px'
+            if (content) content.style.fontSize = '20px'
+          }
         })
         setJsonData(false)
       }

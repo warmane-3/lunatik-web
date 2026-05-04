@@ -150,10 +150,19 @@
   left: 10px;
   height: auto;
   width: 238px;
+  min-width: 238px;
   pointer-events: auto;
+  /* display: flex; */
+  /* justify-content: center; */
+  text-wrap: nowrap;
+  z-index: 100;
+}
+
+.date-container h1 {
+  width: 100%;
   display: flex;
   justify-content: center;
-  z-index: 100;
+  align-items: center;
 }
 
 .date {

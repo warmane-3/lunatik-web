@@ -170,11 +170,10 @@ const SearchPlayer = ({
           onMouseEnter={() => setLastDays(true)}
         >
           {lastDays ? (
-            <h1>Ver días anteriores</h1>
+            <h1 >Ver días anteriores</h1>
           ) : (
             <>
-              <h1>Ultima actualizacion:</h1>
-              <h1>{`${day} de ${month} - ${hoursMin}`}</h1>
+              <h1>Actualizacion: {`${day} de ${month} - ${hoursMin}`}</h1>
             </>
           )}
           {listDays && (
