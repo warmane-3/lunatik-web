@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router'
 import { objectPost } from '../../helpers/objetPost'
 import { MdVisibility, MdVisibilityOff } from 'react-icons/md'
 import { useDispatch, useSelector } from 'react-redux'
-import { addUser } from '../../redux/slice/sliceLogin'
+import { addUser, setUserData } from '../../redux/slice/sliceLogin'
 
 const Login = ({ setShowAddDkp }) => {
   const [inputValue, setInputValue] = useState({
@@ -24,6 +24,7 @@ const Login = ({ setShowAddDkp }) => {
     if (result.response) {
       console.log('result.response', result.response)
       setShowAddDkp(result.response)
+      dispatch(setUserData(inputValue))
       dispatch(addUser(result.response))
       navigate('/')
     }

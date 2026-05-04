@@ -76,10 +76,14 @@ export const getSecond = createAsyncThunk(
 
 export const deleteCharacter = createAsyncThunk(
   'players/deleteCharacter',
-  async (name, thunkAPI) => {
+  async ({ name, userData }, thunkAPI) => {
     try {
       const response = await fetch(`${API}/characters/${name}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userData)
       })
       const data = await response.json()
       if (!response.ok) {
@@ -94,10 +98,14 @@ export const deleteCharacter = createAsyncThunk(
 
 export const deleteAlter = createAsyncThunk(
   'players/deleteAlter',
-  async (name, thunkAPI) => {
+  async ({ name, userData }, thunkAPI) => {
     try {
       const response = await fetch(`${API}/alter/${name}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userData)
       })
       const data = await response.json()
       if (!response.ok) {

@@ -12,6 +12,7 @@ const PlayerModal = ({ player, alters, onClose }) => {
   const modalRef = useRef(null)
   const dispatch = useDispatch()
   const user = useSelector((state) => state.user.userState.user)
+  const userData = useSelector((state) => state.user.userState.userData)
   const {
     scanning,
     playerName,
@@ -77,10 +78,10 @@ const PlayerModal = ({ player, alters, onClose }) => {
       confirmButtonColor: '#d33'
     })
     if (result.isConfirmed) {
-      dispatch(deleteAlter(alterName))
+      dispatch(deleteAlter({ name: alterName, userData }))
       onClose()
     }
-  }, [dispatch, onClose])
+  }, [dispatch, onClose, userData])
 
   const displayPlayerName = playerName || player?.name
 

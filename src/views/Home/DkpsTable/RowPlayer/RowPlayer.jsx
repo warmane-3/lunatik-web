@@ -18,6 +18,7 @@ const RowPlayer = ({
   const greenColorTimeoutRef = useRef(null)
   const dispatch = useDispatch()
   const user = useSelector((state) => state.user.userState.user)
+  const userData = useSelector((state) => state.user.userState.userData)
 
   const handleDelete = useCallback(async (e) => {
     e.stopPropagation()
@@ -31,9 +32,9 @@ const RowPlayer = ({
       confirmButtonColor: '#d33'
     })
     if (result.isConfirmed) {
-      dispatch(deleteCharacter(ele.name))
+      dispatch(deleteCharacter({ name: ele.name, userData }))
     }
-  }, [dispatch, ele.name])
+  }, [dispatch, ele.name, userData])
 
   // Cleanup green color timeout on unmount
   useEffect(() => {

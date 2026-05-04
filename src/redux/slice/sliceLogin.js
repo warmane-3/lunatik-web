@@ -3,6 +3,7 @@ import { loginUser } from '../actions/actionsLogin'
 
 const initialState = {
   user: null,
+  userData: {user: "", password: ""},
   error: '',
   loading: false
 }
@@ -19,7 +20,10 @@ export const userSlice = createSlice({
     },
     logoutUser: (state) => {
       state.user = null
-    }
+    },
+    setUserData: (state, action) => {
+      state.userData = action.payload
+    },
   },
   // 3 acciones asincronas por cada acción creada
   extraReducers: (builder) => {
@@ -36,5 +40,5 @@ export const userSlice = createSlice({
 
 // La funcion "createSlice" de redux-toolkit, crea 2 propiedades dentro de "userSlice"
 // estas propieades son ".actions" y ".reducer"
-export const { addUser, logoutUser } = userSlice.actions
+export const { addUser, logoutUser, setUserData } = userSlice.actions
 export default userSlice.reducer // esto es el userReducer usado en el archivo store.js

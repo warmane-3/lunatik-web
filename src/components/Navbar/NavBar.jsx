@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { FaRegMoon } from 'react-icons/fa6'
 import { useSelector, useDispatch } from 'react-redux'
-import { logoutUser } from '../../redux/slice/sliceLogin'
+import { logoutUser, setUserData } from '../../redux/slice/sliceLogin'
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -20,6 +20,7 @@ const NavBar = () => {
 
   const handleLogout = () => {
     dispatch(logoutUser())
+    dispatch(setUserData({user: "", password: ""}))
     navigate('/')
   }
 

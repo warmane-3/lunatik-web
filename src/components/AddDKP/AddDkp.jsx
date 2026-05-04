@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
 import { API } from '../../views/Home/DkpsTable/DkpsTable.service'
 import Swal from 'sweetalert2'
 import './AddDkp.css'
@@ -6,6 +7,7 @@ import './AddDkp.css'
 const AddDkp = ({ setButtonShowAddDkp }) => {
   const [xmlData, setXmlData] = useState('')
   const [jsonData, setJsonData] = useState(false)
+  const userData = useSelector((state) => state.user.userState.userData)
 
   const handleXmlChange = (e) => {
     setXmlData(e.target.value)
@@ -20,7 +22,7 @@ const AddDkp = ({ setButtonShowAddDkp }) => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ body: xmlData })
+        body: JSON.stringify({ body: xmlData, ...userData })
       })
       const result = await response.json()
       if (!result.error) {
