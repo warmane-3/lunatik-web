@@ -91,9 +91,9 @@ const Admin = () => {
         console.log(result.payload)
 
         await Swal.fire({
-          title: 'Error',
-          text: result.payload || 'Error al crear administrador',
-          icon: 'error',
+          title: 'Éxito',
+          text: `Administrador ${result.payload.username} creado correctamente`,
+          icon: 'success',
           confirmButtonText: 'OK'
         })
         setFormData({ username: '', password: '', email: '' })
@@ -136,10 +136,12 @@ const Admin = () => {
 
     if (result.isConfirmed) {
       const deleteResult = await dispatch(deleteAdmin({ username, userData }))
-      if (deleteResult.payload?.error) {
+      console.log('deleteResult', deleteResult)
+
+      if (deleteResult.error?.message) {
         await Swal.fire({
           title: 'Error',
-          text: deleteResult.payload.error,
+          text: deleteResult.payload,
           icon: 'error',
           confirmButtonText: 'OK'
         })
@@ -265,13 +267,13 @@ const Admin = () => {
                     {userData.user === 'Lunatik' && (
                       <div className='admin-actions'>
                         <button
-                          className='btn-edit'
+                          className={`btn-edit ${admin.username === 'Lunatik' ? 'hidden' : ''}`}
                           onClick={() => handleEdit(admin)}
                         >
                           Editar
                         </button>
                         <button
-                          className='btn-delete'
+                          className={`btn-delete ${admin.username === 'Lunatik' ? 'hidden' : ''}`}
                           onClick={() => handleDelete(admin.username)}
                         >
                           Eliminar
