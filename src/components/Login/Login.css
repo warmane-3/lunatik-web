@@ -120,15 +120,14 @@
 
 .login-forgot-password {
   text-align: center;
-  color: #94a3b8;
+  color: #b93fff;
   font-size: 14px;
-  text-decoration: none;
   transition: color 0.3s ease;
   margin-top: 5px;
 }
 
 .login-forgot-password:hover {
-  color: #a855f7;
+  color: #8e16ff;
 }
 
 @media (max-width: 480px) {

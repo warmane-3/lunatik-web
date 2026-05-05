@@ -109,7 +109,7 @@ const Login = ({ setShowAddDkp }) => {
           Login
         </button>
         <Link to='/login/forgot-password' className='login-forgot-password'>
-          ¿Olvidaste tu contraseña?
+          Recuperar o Cambiar Contraseña
         </Link>
       </form>
     </div>
