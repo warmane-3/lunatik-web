@@ -9,7 +9,8 @@ import {
   FaLightbulb,
   FaInfoCircle,
   FaMedal,
-  FaHandHoldingHeart
+  FaHandHoldingHeart,
+  FaBitcoin
 } from 'react-icons/fa'
 import { GiSwordsEmblem, GiHealingShield } from 'react-icons/gi'
 import './LootRules.css'
@@ -53,7 +54,9 @@ const LootRules = memo(() => {
     { name: 'Top Daño Útil (LK)', value: '+200' },
     { name: 'Uso de 12 Pociones', value: '+500' },
     { name: 'Puntualidad', value: '+500' },
-    { name: 'Fixear Clase', value: '+500' }
+    { name: 'Fixear Clase', value: '+500' },
+    { name: 'Bonus Terminar Raid a Tiempo', value: '+1000' },
+    { name: 'Bonus Terminar Boss en Tiempo', value: '+500' }
   ]
 
   const penalties = [
@@ -71,6 +74,16 @@ const LootRules = memo(() => {
       name: 'Error Repetitivo',
       value: '-2000',
       desc: 'Wipes por culpa personal, reincidencia.'
+    },
+    {
+      name: 'Muy Poco Daño en Bosses',
+      value: '-500',
+      desc: 'Pegar menos de 13k (DBs LOD) - 11k (otra raid).'
+    },
+    {
+      name: 'No Tener el Gallo',
+      value: '-500',
+      desc: 'Melee y Hunter sin el gallo.'
     }
   ]
 
@@ -206,11 +219,22 @@ const LootRules = memo(() => {
                 <FaHandHoldingHeart className='inline mr-2 text-primary' />
                 Se premia asistencia y rendimiento real.
               </li>
+              <li className='mt-3'>
+                <span className='text-primary font-bold'>
+                  <FaBitcoin className='inline mr-2 text-primary' />
+                  Puedes comprar con los DKP:
+                </span>
+                <ul className='ml-6 mt-2 space-y-1'>
+                  <li className='text-sm text-text-muted'>• Boosteo BANE</li>
+                  <li className='text-sm text-text-muted'>• Boosteo TOC 10 HC</li>
+                  <li className='text-sm text-text-muted'>• Boosteo RS 10 HC</li>
+                </ul>
+              </li>
             </ul>
             <div className='mt-8 pt-4 border-t border-white/10 text-center'>
               <p className='text-primary font-cinzel italic'>
                 {`"Porque bajo la luna… todos somos LUNATIK."`}
-`              </p>
+              </p>
             </div>
           </section>
         </div>

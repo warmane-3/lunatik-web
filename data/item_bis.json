@@ -5,1057 +5,166 @@
       {
         "name": "LORD_MARROWGAR",
         "items": [
-          {
-            "item": "Bryntroll, the Bone Arbiter",
-            "classes": ["DEATHKNIGHT_UNHOLY"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50709
-          },
-          {
-            "item": "Frozen Bonespike",
-            "classes": [
-              "PRIEST_SHADOW",
-              "DRUID_BALANCE",
-              "MAGE",
-              "SHAMAN_ELEMENTAL"
-            ],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50608
-          },
-          {
-            "item": "Bulwark of Smouldering Steel",
-            "classes": ["SHAMAN_RESTORATION", "PALADIN_HOLY"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50616
-          },
-          {
-            "item": "Gendarme's Cuirass",
-            "classes": ["TANK"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50606
-          },
-          {
-            "item": "Rusted Bonespike Pauldrons",
-            "classes": ["PALADIN_HOLY"],
-            "priority": "IGNORE",
-            "rank": null,
-            "target": null,
-            "comment": "No relevante",
-            "id": 50617
-          },
-          {
-            "item": "Legguards of Lost Hope",
-            "classes": ["TANK"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50612
-          },
-          {
-            "item": "Bracers of Dark Reckoning",
-            "classes": ["TANK"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50611
-          },
-          {
-            "item": "Snowserpent Mail Helm",
-            "classes": ["HUNTER", "SHAMAN_ENHANCEMENT"],
-            "priority": "IGNORE",
-            "rank": null,
-            "target": null,
-            "comment": "No relevante",
-            "id": 50605
-          },
-          {
-            "item": "Frostbitten Fur Boots",
-            "classes": ["ROGUE", "DRUID_FERAL"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50607
-          },
-          {
-            "item": "Handguards of Winter's Respite",
-            "classes": ["DRUID_RESTORATION"],
-            "priority": "IGNORE",
-            "rank": null,
-            "target": null,
-            "comment": "No relevante",
-            "id": 50615
-          },
-          {
-            "item": "Crushing Coldwraith Belt",
-            "classes": [
-              "MAGE",
-              "PRIEST_SHADOW",
-              "DRUID_BALANCE",
-              "WARLOCK",
-              "PRIEST_DISCIPLINE"
-            ],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50613
-          },
-          {
-            "item": "Band of the Bone Colossus",
-            "classes": ["DRUID_FERAL", "PALADIN_RETRIBUTION", "ROGUE"],
-            "priority": "PRIORITY",
-            "rank": null,
-            "target": "DRUID_FERAL",
-            "comment": "Feral prio",
-            "id": 50604
-          },
-          {
-            "item": "Loop of the Endless Labyrinth",
-            "classes": ["CASTER"],
-            "priority": "NON_BIS",
-            "rank": null,
-            "target": null,
-            "comment": "No es bis",
-            "id": 50614
-          },
-          {
-            "item": "Marrowgar's Frigid Eye",
-            "classes": ["HEALER"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50610
-          },
-          {
-            "item": "Bone Sentinel's Amulet",
-            "classes": ["CASTER"],
-            "priority": "NON_BIS",
-            "rank": null,
-            "target": null,
-            "comment": "No es bis",
-            "id": 50609
-          }
+          { "item": "Bryntroll, the Bone Arbiter", "classes": ["DEATHKNIGHT_UNHOLY"], "priority": null, "id": 50709 },
+          { "item": "Frozen Bonespike", "classes": ["PRIEST_SHADOW", "DRUID_BALANCE", "MAGE", "SHAMAN_ELEMENTAL"], "priority": null, "id": 50608 },
+          { "item": "Bulwark of Smouldering Steel", "classes": ["SHAMAN_RESTORATION", "PALADIN_HOLY"], "priority": null, "id": 50616 },
+          { "item": "Gendarme's Cuirass", "classes": [], "priority": "IGNORE", "comment": "No relevante", "id": 50606 },
+          { "item": "Rusted Bonespike Pauldrons", "classes": ["PALADIN_HOLY"], "priority": "IGNORE", "comment": "No relevante", "id": 50617 },
+          { "item": "Legguards of Lost Hope", "classes": ["TANK"], "priority": null, "id": 50612 },
+          { "item": "Bracers of Dark Reckoning", "classes": ["TANK"], "priority": null, "id": 50611 },
+          { "item": "Snowserpent Mail Helm", "classes": ["HUNTER", "SHAMAN_ENHANCEMENT"], "priority": "IGNORE", "comment": "No relevante", "id": 50605 },
+          { "item": "Frostbitten Fur Boots", "classes": ["ROGUE", "DRUID_FERAL"], "priority": "BIS", "id": 50607 },
+          { "item": "Handguards of Winter's Respite", "classes": ["DRUID_RESTORATION"], "priority": "IGNORE", "comment": "No relevante", "id": 50615 },
+          { "item": "Crushing Coldwraith Belt", "classes": ["MAGE", "PRIEST_SHADOW", "DRUID_BALANCE", "WARLOCK_DEMONOLOGY", "WARLOCK_AFFLICTION", "PRIEST_DISCIPLINE"], "priority": "BIS", "id": 50613 },
+          { "item": "Band of the Bone Colossus", "classes": ["DRUID_FERAL", "PALADIN_RETRIBUTION", "ROGUE"], "priority": "PRIORITY", "comment": "Feral prio", "id": 50604 },
+          { "item": "Loop of the Endless Labyrinth", "classes": ["MAGE", "PRIEST_SHADOW", "DRUID_BALANCE", "WARLOCK"], "priority": "NON_BIS", "id": 50614 },
+          { "item": "Marrowgar's Frigid Eye", "classes": ["HEALER"], "priority": null, "id": 50610 },
+          { "item": "Bone Sentinel's Amulet", "classes": ["MAGE", "PRIEST_SHADOW", "DRUID_BALANCE", "WARLOCK"], "priority": "NON_BIS", "id": 50609 }
         ]
       },
       {
         "name": "LADY_DEATHWHISPER",
         "items": [
-          {
-            "item": "Zod's Repeating Longbow",
-            "classes": ["HUNTER", "SHAMAN_ENHANCEMENT"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50638
-          },
-          {
-            "item": "Heartpierce",
-            "classes": [],
-            "priority": "IGNORE",
-            "rank": null,
-            "target": null,
-            "comment": "No relevante",
-            "id": 50641
-          },
-          {
-            "item": "Nibelung",
-            "classes": ["CASTER"],
-            "priority": "IGNORE",
-            "rank": null,
-            "target": null,
-            "comment": "No relevante",
-            "id": 50648
-          },
-          {
-            "item": "Blood-Soaked Saronite Stompers",
-            "classes": ["MELEE_PLATE_DPS"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50639
-          },
-          {
-            "item": "Fallen Lord's Handguards",
-            "classes": ["PALADIN_HOLY"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50650
-          },
-          {
-            "item": "Broken Ram Skull Helm",
-            "classes": ["TANK"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50640
-          },
-          {
-            "item": "Leggings of Northern Lights",
-            "classes": ["HUNTER"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50645
-          },
-          {
-            "item": "Necrophotic Greaves",
-            "classes": ["SHAMAN_RESTORATION"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50652
-          },
-          {
-            "item": "Cultist's Bloodsoaked Spaulders",
-            "classes": ["ROGUE"],
-            "priority": "IGNORE",
-            "rank": null,
-            "target": null,
-            "comment": "No relevante",
-            "id": 50646
-          },
-          {
-            "item": "Deathwhisper Raiment",
-            "classes": ["DRUID_RESTORATION"],
-            "priority": "IGNORE",
-            "rank": null,
-            "target": null,
-            "comment": "No relevante",
-            "id": 50649
-          },
-          {
-            "item": "Shoulders of Mercy Killing",
-            "classes": ["CASTER"],
-            "priority": "IGNORE",
-            "rank": null,
-            "target": null,
-            "comment": "No relevante",
-            "id": 50643
-          },
-          {
-            "item": "The Lady's Brittle Bracers",
-            "classes": ["CASTER"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50651
-          },
-          {
-            "item": "Ring of Maddening Whispers",
-            "classes": ["CASTER"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50644
-          },
-          {
-            "item": "Juggernaut Band",
-            "classes": ["TANK"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50642
-          },
-          {
-            "item": "Ahn'kahar Onyx Neckguard",
-            "classes": [
-              "DEATHKNIGHT_UNHOLY",
-              "DEATHKNIGHT_FROST",
-              "PALADIN_RETRIBUTION",
-              "WARRIOR"
-            ],
-            "priority": "NON_BIS",
-            "rank": null,
-            "target": null,
-            "comment": "No es bis",
-            "id": 50647
-          }
+          { "item": "Zod's Repeating Longbow", "classes": ["HUNTER", "SHAMAN_ENHANCEMENT"], "priority": null, "id": 50638 },
+          { "item": "Heartpierce", "classes": [], "priority": "IGNORE", "comment": "No relevante", "id": 50641 },
+          { "item": "Nibelung", "classes": ["MAGE", "PRIEST_SHADOW", "DRUID_BALANCE", "WARLOCK"], "priority": "IGNORE", "comment": "No relevante", "id": 50648 },
+          { "item": "Blood-Soaked Saronite Stompers", "classes": ["DEATHKNIGHT_UNHOLY", "DEATHKNIGHT_FROST", "WARRIOR", "PALADIN_RETRIBUTION"], "priority": null, "id": 50639 },
+          { "item": "Fallen Lord's Handguards", "classes": ["PALADIN_HOLY"], "priority": "BIS", "id": 50650 },
+          { "item": "Broken Ram Skull Helm", "classes": ["TANK"], "priority": "BIS", "id": 50640 },
+          { "item": "Leggings of Northern Lights", "classes": ["HUNTER"], "priority": "BIS", "id": 50645 },
+          { "item": "Necrophotic Greaves", "classes": ["SHAMAN_RESTORATION"], "priority": null, "id": 50652 },
+          { "item": "Cultist's Bloodsoaked Spaulders", "classes": ["ROGUE"], "priority": "IGNORE", "comment": "No relevante", "id": 50646 },
+          { "item": "Deathwhisper Raiment", "classes": ["DRUID_RESTORATION"], "priority": "IGNORE", "comment": "No relevante", "id": 50649 },
+          { "item": "Shoulders of Mercy Killing", "classes": ["MAGE", "PRIEST_SHADOW", "DRUID_BALANCE", "WARLOCK"], "priority": "IGNORE", "comment": "No relevante", "id": 50643 },
+          { "item": "The Lady's Brittle Bracers", "classes": ["MAGE", "PRIEST_SHADOW", "DRUID_BALANCE", "WARLOCK"], "priority": null, "id": 50651 },
+          { "item": "Ring of Maddening Whispers", "classes": ["MAGE", "PRIEST_SHADOW", "DRUID_BALANCE", "WARLOCK"], "priority": null, "id": 50644 },
+          { "item": "Juggernaut Band", "classes": ["TANK"], "priority": null, "id": 50642 },
+          { "item": "Ahn'kahar Onyx Neckguard", "classes": ["DEATHKNIGHT_UNHOLY", "DEATHKNIGHT_FROST", "PALADIN_RETRIBUTION", "WARRIOR"], "priority": "NON_BIS", "id": 50647 }
         ]
       },
       {
         "name": "GUNSHIP_BATTLE",
         "items": [
-          {
-            "item": "Scourgeborne Waraxe",
-            "classes": ["ROGUE"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50654
-          },
-          {
-            "item": "Polar Bear Claw Bracers",
-            "classes": ["DEATHKNIGHT_UNHOLY", "PALADIN_RETRIBUTION", "WARRIOR"],
-            "priority": "NON_BIS",
-            "rank": null,
-            "target": null,
-            "comment": "No es bis",
-            "id": 50659
-          },
-          {
-            "item": "Waistband of Righteous Fury",
-            "classes": ["PALADIN_HOLY"],
-            "priority": "IGNORE",
-            "rank": null,
-            "target": null,
-            "comment": "No relevante",
-            "id": 50667
-          },
-          {
-            "item": "Boneguard Commander's Pauldrons",
-            "classes": ["TANK"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50660
-          },
-          {
-            "item": "Scourge Hunter's Vambraces",
-            "classes": ["HUNTER"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50655
-          },
-          {
-            "item": "Ikfirus's Sack of Wonder",
-            "classes": ["ROGUE"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50656
-          },
-          {
-            "item": "Boots of Unnatural Growth",
-            "classes": ["DRUID_RESTORATION", "DRUID_BALANCE"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50665
-          },
-          {
-            "item": "Gunship Captain's Mittens",
-            "classes": ["PRIEST_SHADOW", "DRUID_BALANCE"],
-            "priority": "BIS",
-            "rank": 2,
-            "target": null,
-            "comment": "2nd option",
-            "id": 50663
-          },
-          {
-            "item": "Corp'rethar Ceremonial Crown",
-            "classes": ["CLOTH"],
-            "priority": "IGNORE",
-            "rank": null,
-            "target": null,
-            "comment": "No relevante",
-            "id": 50661
-          },
-          {
-            "item": "Shadowvault Slayer's Cloak",
-            "classes": [
-              "PALADIN_RETRIBUTION",
-              "WARRIOR",
-              "ROGUE",
-              "DRUID_FERAL",
-              "HUNTER"
-            ],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50653
-          },
-          {
-            "item": "Skeleton Lord's Circle",
-            "classes": ["DEATHKNIGHT"],
-            "priority": "IGNORE",
-            "rank": null,
-            "target": null,
-            "comment": "No relevante",
-            "id": 50657
-          },
-          {
-            "item": "Ring of Rapid Ascent",
-            "classes": [
-              "PALADIN_HOLY",
-              "PRIEST_SHADOW",
-              "MAGE",
-              "DRUID_BALANCE"
-            ],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50664
-          },
-          {
-            "item": "Amulet of the Silent Eulogy",
-            "classes": ["PRIEST_SHADOW", "WARLOCK_DEMONOLOGY"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50658
-          },
-          {
-            "item": "Althor's Abacus",
-            "classes": [
-              "SHAMAN_RESTORATION",
-              "PRIEST_DISCIPLINE",
-              "DRUID_RESTORATION"
-            ],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50366
-          },
-          {
-            "item": "Corpse Tongue Coin",
-            "classes": [],
-            "priority": "IGNORE",
-            "rank": null,
-            "target": null,
-            "comment": "No relevante",
-            "id": 50349
-          }
+          { "item": "Scourgeborne Waraxe", "classes": ["ROGUE"], "priority": "BIS", "id": 50654 },
+          { "item": "Polar Bear Claw Bracers", "classes": ["DEATHKNIGHT_UNHOLY", "PALADIN_RETRIBUTION", "WARRIOR"], "priority": "NON_BIS", "id": 50659 },
+          { "item": "Waistband of Righteous Fury", "classes": ["PALADIN_HOLY"], "priority": "IGNORE", "comment": "No relevante", "id": 50667 },
+          { "item": "Boneguard Commander's Pauldrons", "classes": ["TANK"], "priority": null, "id": 50660 },
+          { "item": "Scourge Hunter's Vambraces", "classes": ["HUNTER"], "priority": "BIS", "id": 50655 },
+          { "item": "Ikfirus's Sack of Wonder", "classes": ["ROGUE"], "priority": "BIS", "id": 50656 },
+          { "item": "Boots of Unnatural Growth", "classes": ["DRUID_RESTORATION", "DRUID_BALANCE"], "priority": null, "id": 50665 },
+          { "item": "Gunship Captain's Mittens", "classes": ["PRIEST_SHADOW", "DRUID_BALANCE"], "priority": "BIS", "rank": 2, "comment": "2nd option", "id": 50663 },
+          { "item": "Corp'rethar Ceremonial Crown", "classes": ["MAGE", "PRIEST_SHADOW", "DRUID_BALANCE", "WARLOCK", "PRIEST_DISCIPLINE"], "priority": "IGNORE", "comment": "No relevante", "id": 50661 },
+          { "item": "Shadowvault Slayer's Cloak", "classes": ["PALADIN_RETRIBUTION", "WARRIOR", "ROGUE", "DRUID_FERAL", "HUNTER"], "priority": "BIS", "id": 50653 },
+          { "item": "Skeleton Lord's Circle", "classes": ["DEATHKNIGHT_UNHOLY", "PALADIN_RETRIBUTION"], "priority": "IGNORE", "comment": "No relevante", "id": 50657 },
+          { "item": "Ring of Rapid Ascent", "classes": ["PALADIN_HOLY", "PRIEST_SHADOW", "MAGE", "DRUID_BALANCE"], "priority": "BIS", "id": 50664 },
+          { "item": "Amulet of the Silent Eulogy", "classes": ["PRIEST_SHADOW", "WARLOCK_DEMONOLOGY"], "priority": "BIS", "id": 50658 },
+          { "item": "Althor's Abacus", "classes": ["SHAMAN_RESTORATION", "PRIEST_DISCIPLINE", "DRUID_RESTORATION"], "priority": null, "id": 50366 },
+          { "item": "Corpse Tongue Coin", "classes": [], "priority": "IGNORE", "comment": "No relevante", "id": 50349 }
         ]
       },
       {
         "name": "DEATHBRINGER_SAURFANG",
         "items": [
-          {
-            "item": "Bloodvenom Blade",
-            "classes": ["ROGUE", "DEATHKNIGHT_FROST", "PALADIN_PROTECTION"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50672
-          },
-          {
-            "item": "Belt of the Blood Nova",
-            "classes": ["SHAMAN_RESTORATION", "PALADIN_HOLY"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50671
-          },
-          {
-            "item": "Toskk's Maximized Wristguards",
-            "classes": ["WARRIOR", "ROGUE", "DRUID_FERAL"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50670
-          },
-          {
-            "item": "Greatcloak of the Turned Champion",
-            "classes": ["DRUID_RESTORATION", "PRIEST_DISCIPLINE"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50668
-          },
-          {
-            "item": "Deathbringer's Will",
-            "classes": [
-              "HUNTER",
-              "WARRIOR",
-              "ROGUE",
-              "DEATHKNIGHT",
-              "DRUID_FERAL"
-            ],
-            "priority": "CONDITIONAL",
-            "rank": null,
-            "target": null,
-            "comment": "Retry con Shadowmourne",
-            "id": 50363
-          }
+          { "item": "Bloodvenom Blade", "classes": ["ROGUE", "DEATHKNIGHT_FROST", "PALADIN_PROTECTION"], "priority": null, "id": 50672 },
+          { "item": "Belt of the Blood Nova", "classes": ["SHAMAN_RESTORATION", "PALADIN_HOLY"], "priority": null, "id": 50671 },
+          { "item": "Toskk's Maximized Wristguards", "classes": ["WARRIOR", "ROGUE", "DRUID_FERAL"], "priority": null, "id": 50670 },
+          { "item": "Greatcloak of the Turned Champion", "classes": ["DRUID_RESTORATION", "PRIEST_DISCIPLINE"], "priority": null, "id": 50668 },
+          { "item": "Deathbringer's Will", "classes": ["HUNTER", "WARRIOR", "ROGUE", "DEATHKNIGHT_UNHOLY", "DEATHKNIGHT_FROST", "DRUID_FERAL"], "priority": "CONDITIONAL", "comment": "Retry con Shadowmourne", "id": 50363 }
         ]
       },
       {
         "name": "FESTERGUT",
         "items": [
-          {
-            "item": "Black Bruise",
-            "classes": ["SHAMAN_ENHANCEMENT"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50692
-          },
-          {
-            "item": "Distant Land",
-            "classes": ["DRUID_FERAL", "HUNTER"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50695
-          },
-          {
-            "item": "Fleshrending Gauntlets",
-            "classes": ["PALADIN_RETRIBUTION"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": "Interpretado desde 'Retry'",
-            "id": 50690
-          },
-          {
-            "item": "Faceplate of the Forgotten",
-            "classes": ["PALADIN_HOLY"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": "No confirmado",
-            "id": 50701
-          },
-          {
-            "item": "Belt of Broken Bones",
-            "classes": ["TANK"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50691
-          },
-          {
-            "item": "Carapace of Forgotten Kings",
-            "classes": ["SHAMAN_ENHANCEMENT", "HUNTER"],
-            "priority": "IGNORE",
-            "rank": null,
-            "target": null,
-            "comment": "No relevante",
-            "id": 50689
-          },
-          {
-            "item": "Nerub'ar Stalker's Cord",
-            "classes": ["PALADIN_RETRIBUTION"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": "Interpretado desde 'Retry'",
-            "id": 50688
-          },
-          {
-            "item": "Unclean Surgical Gloves",
-            "classes": ["SHAMAN_RESTORATION"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50703
-          },
-          {
-            "item": "Horrific Flesh Epaulets",
-            "classes": ["SHAMAN_RESTORATION"],
-            "priority": "IGNORE",
-            "rank": null,
-            "target": null,
-            "comment": "No relevante",
-            "id": 50698
-          },
-          {
-            "item": "Gangrenous Leggings",
-            "classes": ["ROGUE"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50697
-          },
-          {
-            "item": "Leather of Stitched Scourge Parts",
-            "classes": [],
-            "priority": "IGNORE",
-            "rank": null,
-            "target": null,
-            "comment": "No relevante",
-            "id": 50696
-          },
-          {
-            "item": "Plaguebringer's Stained Pants",
-            "classes": ["PRIEST_SHADOW", "WARLOCK_DEMONOLOGY", "DRUID_BALANCE"],
-            "priority": "BIS",
-            "rank": 1,
-            "target": null,
-            "comment": "1st option",
-            "id": 50694
-          },
-          {
-            "item": "Plague Scientist's Boots",
-            "classes": ["SHAMAN_RESTORATION", "PRIEST_DISCIPLINE", "CASTER"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50699
-          },
-          {
-            "item": "Lingering Illness",
-            "classes": ["MAGE_FROST"],
-            "priority": null,
-            "rank": 2,
-            "target": null,
-            "comment": "2nd option",
-            "id": 50702
-          },
-          {
-            "item": "Might of Blight",
-            "classes": ["DEATHKNIGHT_UNHOLY", "DEATHKNIGHT_FROST", "WARRIOR"],
-            "priority": "BIS",
-            "rank": null,
-            "target": "DEATHKNIGHT",
-            "comment": "Bis dk",
-            "id": 50693
-          }
+          { "item": "Black Bruise", "classes": ["SHAMAN_ENHANCEMENT"], "priority": null, "id": 50692 },
+          { "item": "Distant Land", "classes": ["DRUID_FERAL", "HUNTER"], "priority": null, "id": 50695 },
+          { "item": "Fleshrending Gauntlets", "classes": ["PALADIN_RETRIBUTION"], "priority": null, "id": 50690 },
+          { "item": "Faceplate of the Forgotten", "classes": ["PALADIN_HOLY"], "priority": null, "comment": "No confirmado", "id": 50701 },
+          { "item": "Belt of Broken Bones", "classes": ["TANK"], "priority": null, "id": 50691 },
+          { "item": "Carapace of Forgotten Kings", "classes": ["SHAMAN_ENHANCEMENT", "HUNTER"], "priority": "IGNORE", "comment": "No relevante", "id": 50689 },
+          { "item": "Nerub'ar Stalker's Cord", "classes": ["PALADIN_RETRIBUTION", "HUNTER"], "priority": null, "id": 50688 },
+          { "item": "Unclean Surgical Gloves", "classes": ["SHAMAN_RESTORATION"], "priority": "BIS", "id": 50703 },
+          { "item": "Horrific Flesh Epaulets", "classes": ["SHAMAN_RESTORATION"], "priority": "IGNORE", "comment": "No relevante", "id": 50698 },
+          { "item": "Gangrenous Leggings", "classes": ["ROGUE"], "priority": "BIS", "id": 50697 },
+          { "item": "Plaguebringer's Stained Pants", "classes": ["PRIEST_SHADOW", "WARLOCK_DEMONOLOGY", "DRUID_BALANCE"], "priority": "BIS", "rank": 1, "comment": "1st option", "id": 50694 },
+          { "item": "Plague Scientist's Boots", "classes": ["SHAMAN_RESTORATION", "MAGE", "PRIEST_SHADOW", "DRUID_BALANCE", "WARLOCK", "PRIEST_DISCIPLINE"], "priority": "BIS", "id": 50699 },
+          { "item": "Lingering Illness", "classes": ["MAGE"], "priority": null, "rank": 2, "comment": "2nd option", "id": 50702 },
+          { "item": "Might of Blight", "classes": ["DEATHKNIGHT_UNHOLY", "DEATHKNIGHT_FROST", "WARRIOR"], "priority": "BIS", "comment": "Bis dk", "id": 50693 }
         ]
       },
       {
         "name": "ROTFACE",
         "items": [
-          {
-            "item": "Corpse-Impaling Spike",
-            "classes": ["CASTER"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50684
-          },
-          {
-            "item": "Rot-Resistant Breastplate",
-            "classes": ["PALADIN_HOLY"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50680
-          },
-          {
-            "item": "Bloodsunder's Bracers",
-            "classes": ["SHAMAN_RESTORATION"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50687
-          },
-          {
-            "item": "Aldriana's Gloves of Secrecy",
-            "classes": ["WARRIOR", "ROGUE", "DEATHKNIGHT_FROST"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50675
-          },
-          {
-            "item": "Winding Sheet",
-            "classes": ["DEATHKNIGHT_UNHOLY"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50677
-          },
-          {
-            "item": "Seal of Many Mouths",
-            "classes": ["PALADIN_RETRIBUTION", "DRUID_FERAL"],
-            "priority": "PRIORITY",
-            "rank": null,
-            "target": null,
-            "comment": "No prio",
-            "id": 50678
-          },
-          {
-            "item": "Bile-Encrusted Medallion",
-            "classes": ["TANK"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50682
-          },
-          {
-            "item": "Dislodged Foreign Object",
-            "classes": ["MAGE_FROST", "PRIEST_SHADOW"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50348
-          }
+          { "item": "Corpse-Impaling Spike", "classes": ["MAGE", "PRIEST_SHADOW", "DRUID_BALANCE", "WARLOCK"], "priority": "BIS", "id": 50684 },
+          { "item": "Rot-Resistant Breastplate", "classes": ["PALADIN_HOLY"], "priority": "BIS", "id": 50680 },
+          { "item": "Bloodsunder's Bracers", "classes": ["SHAMAN_RESTORATION"], "priority": "BIS", "comment": "Bis por el momento", "id": 50687 },
+          { "item": "Aldriana's Gloves of Secrecy", "classes": ["WARRIOR", "ROGUE", "DEATHKNIGHT_FROST"], "priority": "BIS", "id": 50675 },
+          { "item": "Winding Sheet", "classes": ["DEATHKNIGHT_UNHOLY"], "priority": "BIS", "id": 50677 },
+          { "item": "Seal of Many Mouths", "classes": ["PALADIN_RETRIBUTION", "DRUID_FERAL"], "priority": "PRIORITY", "comment": "No prio", "id": 50678 },
+          { "item": "Bile-Encrusted Medallion", "classes": ["TANK"], "priority": "BIS", "id": 50682 },
+          { "item": "Dislodged Foreign Object", "classes": ["MAGE", "PRIEST_SHADOW"], "priority": "BIS", "id": 50348 }
         ]
       },
       {
         "name": "PROFESSOR_PUTRICIDE",
         "items": [
-          {
-            "item": "Rigormortis",
-            "classes": ["PALADIN_HOLY", "WARLOCK", "MAGE"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": "No prio",
-            "id": 50704
-          },
-          {
-            "item": "Astrylian's Sutured Cinch",
-            "classes": [
-              "ROGUE",
-              "DRUID_FERAL",
-              "WARRIOR",
-              "PALADIN_RETRIBUTION"
-            ],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50707
-          },
-          {
-            "item": "Professor's Bloodied Smock",
-            "classes": ["DRUID_RESTORATION"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50705
-          },
-          {
-            "item": "Tiny Abomination in a Jar",
-            "classes": ["PALADIN_RETRIBUTION"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50706
-          }
+          { "item": "Rigormortis", "classes": ["PALADIN_HOLY", "WARLOCK_DEMONOLOGY", "WARLOCK_AFFLICTION", "MAGE"], "priority": null, "comment": "No prio", "id": 50704 },
+          { "item": "Astrylian's Sutured Cinch", "classes": ["ROGUE", "DRUID_FERAL", "WARRIOR", "PALADIN_RETRIBUTION"], "priority": "BIS", "id": 50707 },
+          { "item": "Professor's Bloodied Smock", "classes": ["DRUID_RESTORATION"], "priority": "BIS", "id": 50705 },
+          { "item": "Tiny Abomination in a Jar", "classes": ["PALADIN_RETRIBUTION"], "priority": "BIS", "id": 50706 }
         ]
       },
       {
         "name": "BLOOD_PRINCE_COUNCIL",
         "items": [
-          {
-            "item": "Shadow Silk Spindle",
-            "classes": ["CASTER", "PRIEST_DISCIPLINE"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50719
-          },
-          {
-            "item": "Crypt Keeper's Bracers",
-            "classes": ["PALADIN_HOLY"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": "Prebis",
-            "id": 50721
-          },
-          {
-            "item": "Sanguine Silk Robes",
-            "classes": ["DRUID_RESTORATION"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50717
-          },
-          {
-            "item": "San'layn Ritualist Gloves",
-            "classes": ["PRIEST_DISCIPLINE"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50722
-          },
-          {
-            "item": "Royal Crimson Cloak",
-            "classes": ["TANK"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50718
-          },
-          {
-            "item": "Valanar's Other Signet Ring",
-            "classes": ["WARLOCK_DEMONOLOGY"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50714
-          }
+          { "item": "Shadow Silk Spindle", "classes": ["MAGE", "PRIEST_SHADOW", "DRUID_BALANCE", "WARLOCK", "PRIEST_DISCIPLINE"], "priority": "BIS", "id": 50719 },
+          { "item": "Crypt Keeper's Bracers", "classes": ["PALADIN_HOLY"], "priority": null, "comment": "Prebis", "id": 50721 },
+          { "item": "Sanguine Silk Robes", "classes": ["DRUID_RESTORATION"], "priority": "BIS", "id": 50717 },
+          { "item": "San'layn Ritualist Gloves", "classes": ["PRIEST_DISCIPLINE"], "priority": "BIS", "id": 50722 },
+          { "item": "Royal Crimson Cloak", "classes": ["TANK"], "priority": "BIS", "id": 50718 },
+          { "item": "Valanar's Other Signet Ring", "classes": ["WARLOCK_DEMONOLOGY"], "priority": "BIS", "id": 50714 }
         ]
       },
       {
         "name": "BLOOD_QUEEN_LANATHEL",
         "items": [
-          {
-            "item": "Icecrown Glacial Wall",
-            "classes": ["TANK"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50729
-          },
-          {
-            "item": "Blood Queen's Crimson Choker",
-            "classes": ["HEALER", "MAGE_FROST", "DRUID_BALANCE"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50182
-          }
+          { "item": "Icecrown Glacial Wall", "classes": ["TANK"], "priority": "BIS", "id": 50729 },
+          { "item": "Blood Queen's Crimson Choker", "classes": ["HEALER", "MAGE", "DRUID_BALANCE"], "priority": "BIS", "id": 50182 }
         ]
       },
       {
         "name": "VALITHRIA_DREAMWALKER",
         "items": [
-          {
-            "item": "Nightmare Ender",
-            "classes": ["MAGE", "CASTER"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": "Spirit > all casters / prebis",
-            "id": 50631
-          },
-          {
-            "item": "Scourge Reaver's Legplates",
-            "classes": ["DEATHKNIGHT_UNHOLY"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50624
-          },
-          {
-            "item": "Coldwraith Links",
-            "classes": ["DEATHKNIGHT", "WARRIOR"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50620
-          },
-          {
-            "item": "Grinning Skull Greatboots",
-            "classes": ["TANK"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": "Prebis",
-            "id": 50625
-          },
-          {
-            "item": "Anub'ar Stalker's Gloves",
-            "classes": ["PALADIN_RETRIBUTION"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50619
-          },
-          {
-            "item": "Robe of the Waking Nightmare",
-            "classes": ["MAGE"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50629
-          },
-          {
-            "item": "Frostbinder's Shredded Cape",
-            "classes": ["CASTER", "HEALER"],
-            "priority": null,
-            "rank": null,
-            "target": null,
-            "comment": "Prebis",
-            "id": 50628
-          },
-          {
-            "item": "Frostbrood Sapphire Ring",
-            "classes": ["ROGUE", "WARRIOR", "HUNTER", "PALADIN_RETRIBUTION"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": "Arpen",
-            "id": 50618
-          },
-          {
-            "item": "Devium's Eternally Cold Ring",
-            "classes": ["TANK"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50622
-          }
+          { "item": "Nightmare Ender", "classes": ["MAGE", "PRIEST_SHADOW", "DRUID_BALANCE", "WARLOCK"], "priority": "BIS", "comment": "prebis", "id": 50631 },
+          { "item": "Scourge Reaver's Legplates", "classes": ["DEATHKNIGHT_UNHOLY"], "priority": "BIS", "id": 50624 },
+          { "item": "Coldwraith Links", "classes": ["DEATHKNIGHT_FROST", "DEATHKNIGHT_UNHOLY", "WARRIOR"], "priority": "BIS", "id": 50620 },
+          { "item": "Grinning Skull Greatboots", "classes": ["TANK"], "priority": null, "comment": "Prebis", "id": 50625 },
+          { "item": "Anub'ar Stalker's Gloves", "classes": ["PALADIN_RETRIBUTION"], "priority": "BIS", "id": 50619 },
+          { "item": "Robe of the Waking Nightmare", "classes": ["MAGE"], "priority": "BIS", "id": 50629 },
+          { "item": "Frostbinder's Shredded Cape", "classes": ["MAGE", "PRIEST_SHADOW", "DRUID_BALANCE", "WARLOCK", "HEALER"], "priority": null, "comment": "Prebis", "id": 50628 },
+          { "item": "Frostbrood Sapphire Ring", "classes": ["ROGUE", "WARRIOR", "HUNTER", "PALADIN_RETRIBUTION"], "priority": "BIS", "id": 50618 },
+          { "item": "Devium's Eternally Cold Ring", "classes": ["TANK"], "priority": "BIS", "id": 50622 }
         ]
       },
       {
         "name": "SINDRAGOSA",
         "items": [
-          {
-            "item": "Sundial of Eternal Dusk",
-            "classes": ["DRUID_RESTORATION"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50635
-          },
-          {
-            "item": "Memory of Malygos",
-            "classes": ["DRUID_RESTORATION"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50636
-          },
-          {
-            "item": "Sindragosa's Cruel Claw",
-            "classes": ["ROGUE", "HUNTER", "DRUID_FERAL"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50633
-          },
-          {
-            "item": "Phylactery of the Nameless Lich",
-            "classes": ["CASTER"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50365
-          },
-          {
-            "item": "Sindragosa's Flawless Fang",
-            "classes": ["TANK"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50364
-          }
+          { "item": "Sundial of Eternal Dusk", "classes": ["DRUID_RESTORATION"], "priority": "BIS", "id": 50635 },
+          { "item": "Memory of Malygos", "classes": ["DRUID_RESTORATION"], "priority": "BIS", "id": 50636 },
+          { "item": "Sindragosa's Cruel Claw", "classes": ["ROGUE", "HUNTER", "DRUID_FERAL"], "priority": "BIS", "id": 50633 },
+          { "item": "Phylactery of the Nameless Lich", "classes": ["MAGE", "PRIEST_SHADOW", "DRUID_BALANCE", "WARLOCK"], "priority": "BIS", "id": 50365 },
+          { "item": "Sindragosa's Flawless Fang", "classes": ["TANK"], "priority": "BIS", "id": 50364 }
         ]
       },
       {
         "name": "THE_LICH_KING",
         "items": [
-          {
-            "item": "Havoc's Call, Blade of Lordaeron Kings",
-            "classes": ["ROGUE", "DEATHKNIGHT_FROST", "PALADIN_PROTECTION"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50737
-          },
-          {
-            "item": "Fal'inrush, Defender of Quel'thalas",
-            "classes": ["HUNTER", "ROGUE", "WARRIOR"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50733
-          },
-          {
-            "item": "Royal Scepter of Terenas II",
-            "classes": ["PRIEST", "DRUID", "SHAMAN_RESTORATION"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50734
-          },
-          {
-            "item": "Oathbinder, Charge of the Ranger-General",
-            "classes": ["DRUID_FERAL", "HUNTER"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50735
-          },
-          {
-            "item": "Bloodsurge, Kel'Thuzad's Blade of Agony",
-            "classes": ["MAGE", "WARLOCK", "PALADIN_HOLY"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50732
-          },
-          {
-            "item": "Glorenzelg, High-Blade of the Silver Hand",
-            "classes": ["WARRIOR", "DEATHKNIGHT_BLOOD"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 50730
-          },
-          {
-            "item": "Mithrios, Bronzebeard's Legacy",
-            "classes": ["TANK"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": "Opcional",
-            "id": 50738
-          }
+          { "item": "Havoc's Call, Blade of Lordaeron Kings", "classes": ["ROGUE", "DEATHKNIGHT_FROST", "PALADIN_PROTECTION"], "priority": "BIS", "id": 50737 },
+          { "item": "Fal'inrush, Defender of Quel'thalas", "classes": ["HUNTER", "ROGUE", "WARRIOR"], "priority": "BIS", "id": 50733 },
+          { "item": "Royal Scepter of Terenas II", "classes": ["PRIEST_SHADOW", "PRIEST_DISCIPLINE", "DRUID_BALANCE", "SHAMAN_RESTORATION", "DRUID_RESTORATION"], "priority": "BIS", "id": 50734 },
+          { "item": "Oathbinder, Charge of the Ranger-General", "classes": ["DRUID_FERAL", "HUNTER"], "priority": "BIS", "id": 50735 },
+          { "item": "Bloodsurge, Kel'Thuzad's Blade of Agony", "classes": ["MAGE", "WARLOCK_DEMONOLOGY", "WARLOCK_AFFLICTION", "PALADIN_HOLY"], "priority": "BIS", "id": 50732 },
+          { "item": "Glorenzelg, High-Blade of the Silver Hand", "classes": ["WARRIOR", "DEATHKNIGHT_BLOOD"], "priority": "BIS", "id": 50730 },
+          { "item": "Mithrios, Bronzebeard's Legacy", "classes": ["TANK"], "priority": "BIS", "comment": "Opcional", "id": 50738 }
         ]
       }
     ]
@@ -1066,155 +175,22 @@
       {
         "name": "HALION",
         "items": [
-          {
-            "item": "Apocalypse's Advance",
-            "classes": ["WARRIOR", "DEATHKNIGHT", "PALADIN_RETRIBUTION"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 54578
-          },
-          {
-            "item": "Bracers of Fiery Night",
-            "classes": ["CASTER", "PRIEST_DISCIPLINE"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 54582
-          },
-          {
-            "item": "Charred Twilight Scale",
-            "classes": ["CASTER"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 54588
-          },
-          {
-            "item": "Cloak of Burning Dusk",
-            "classes": ["HEALER", "CASTER"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 54583
-          },
-          {
-            "item": "Foreshadow Steps",
-            "classes": ["PALADIN_HOLY"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 54586
-          },
-          {
-            "item": "Glowing Twilight Scale",
-            "classes": ["HEALER"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 54573
-          },
-          {
-            "item": "Penumbra Pendant",
-            "classes": ["WARRIOR", "DEATHKNIGHT", "PALADIN_RETRIBUTION"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 54581
-          },
-          {
-            "item": "Petrified Twilight Scale",
-            "classes": ["TANK"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 54591
-          },
-          {
-            "item": "Phaseshifter's Bracers",
-            "classes": ["HEALER"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 54584
-          },
-          {
-            "item": "Returning Footfalls",
-            "classes": ["HUNTER"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 54577
-          },
-          {
-            "item": "Ring of Phased Regeneration",
-            "classes": ["HEALER"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 54585
-          },
-          {
-            "item": "Sharpened Twilight Scale",
-            "classes": ["MELEE", "HUNTER"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": "All melees + hunt",
-            "id": 54590
-          },
-          {
-            "item": "Signet of Twilight",
-            "classes": ["ROGUE", "PALADIN_RETRIBUTION", "DRUID_FERAL"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 54576
-          },
-          {
-            "item": "Split Shape Belt",
-            "classes": ["SHAMAN_RESTORATION", "PALADIN_HOLY"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 54587
-          },
-          {
-            "item": "Treads of Impending Resurrection",
-            "classes": ["TANK"],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 54579
-          },
-          {
-            "item": "Umbrage Armbands",
-            "classes": [
-              "ROGUE",
-              "PALADIN_RETRIBUTION",
-              "WARRIOR",
-              "DEATHKNIGHT_UNHOLY"
-            ],
-            "priority": "BIS",
-            "rank": null,
-            "target": null,
-            "comment": null,
-            "id": 54580
-          }
+          { "item": "Apocalypse's Advance", "classes": ["WARRIOR", "DEATHKNIGHT", "PALADIN_RETRIBUTION"], "priority": "BIS", "id": 54578 },
+          { "item": "Bracers of Fiery Night", "classes": ["CASTER", "PRIEST_DISCIPLINE"], "priority": "BIS", "id": 54582 },
+          { "item": "Charred Twilight Scale", "classes": ["CASTER"], "priority": "BIS", "id": 54588 },
+          { "item": "Cloak of Burning Dusk", "classes": ["HEALER", "CASTER"], "priority": "BIS", "id": 54583 },
+          { "item": "Foreshadow Steps", "classes": ["PALADIN_HOLY"], "priority": "BIS", "id": 54586 },
+          { "item": "Glowing Twilight Scale", "classes": ["HEALER"], "priority": "BIS", "id": 54573 },
+          { "item": "Penumbra Pendant", "classes": ["WARRIOR", "DEATHKNIGHT", "PALADIN_RETRIBUTION"], "priority": "BIS", "id": 54581 },
+          { "item": "Petrified Twilight Scale", "classes": ["TANK"], "priority": "BIS", "id": 54591 },
+          { "item": "Phaseshifter's Bracers", "classes": ["HEALER"], "priority": "BIS", "id": 54584 },
+          { "item": "Returning Footfalls", "classes": ["HUNTER"], "priority": "BIS", "id": 54577 },
+          { "item": "Ring of Phased Regeneration", "classes": ["HEALER"], "priority": "BIS", "id": 54585 },
+          { "item": "Sharpened Twilight Scale", "classes": ["MELEE", "HUNTER"], "priority": "BIS", "id": 54590 },
+          { "item": "Signet of Twilight", "classes": ["ROGUE", "PALADIN_RETRIBUTION", "DRUID_FERAL"], "priority": "BIS", "id": 54576 },
+          { "item": "Split Shape Belt", "classes": ["SHAMAN_RESTORATION", "PALADIN_HOLY"], "priority": "BIS", "id": 54587 },
+          { "item": "Treads of Impending Resurrection", "classes": ["TANK"], "priority": "BIS", "id": 54579 },
+          { "item": "Umbrage Armbands", "classes": ["ROGUE", "PALADIN_RETRIBUTION", "WARRIOR", "DEATHKNIGHT_UNHOLY"], "priority": "BIS", "id": 54580 }
         ]
       }
     ]
