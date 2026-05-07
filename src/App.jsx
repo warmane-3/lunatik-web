@@ -12,6 +12,10 @@ import Rules from './views/Rules/Rules'
 import LootTable from './views/LootTable/LootTable'
 import LootRules from './views/LootRules/LootRules'
 import Footer from './components/Footer/Footer'
+import UploadLog from './views/Logs/UploadLog'
+import LogList from './views/Logs/LogList'
+import LogDetail from './views/Logs/LogDetail'
+import FightDetail from './views/Logs/FightDetail'
 
 const App = () => {
   const [showAddDKP, setShowAddDkp] = useState(false)
@@ -36,6 +40,12 @@ const App = () => {
           <Route path='/loottable' element={<LootTable />} />
           <Route path='/lootrules' element={<LootRules />} />
           <Route path='/admin' element={<Admin />} />
+          
+          <Route path='/logs/upload' element={<UploadLog />} />
+          <Route path='/logs' element={<LogList />} />
+          <Route path='/logs/:logId' element={<LogDetail />} />
+          <Route path='/logs/fight/:fightId' element={<FightDetail />} />
+
           <Route path='*' element={<NotFound />} />
         </Routes>
       </main>

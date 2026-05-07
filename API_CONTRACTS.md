@@ -7,6 +7,7 @@
 - [DKPs](#dkps)
 - [Login](#login)
 - [Main](#main)
+- [Logs](#logs)
 - [Monitor](#monitor)
 - [Cron](#cron)
 
@@ -21,6 +22,7 @@ Obtiene todos los personajes (Mains y Alters) con la fecha de última actualizac
 #### Response
 
 **200 OK**
+
 ```json
 {
   "response": [
@@ -58,11 +60,12 @@ Obtiene todos los personajes (Mains y Alters) con la fecha de última actualizac
 
 ### POST `/characters`
 
-*Endpoint no implementado (stub).*
+_Endpoint no implementado (stub)._
 
 #### Response
 
 **200 OK**
+
 ```json
 {
   "message": "postMains"
@@ -78,11 +81,13 @@ Elimina un personaje Main y todos sus Alters asociados.
 #### Request
 
 **URL Params:**
+
 ```
 name: string (nombre del personaje Main)
 ```
 
 **Body:**
+
 ```json
 {
   "user": "lunatik",
@@ -93,6 +98,7 @@ name: string (nombre del personaje Main)
 #### Response
 
 **200 OK - Éxito**
+
 ```json
 {
   "message": "Personaje Maicolmb y sus alters eliminados"
@@ -100,6 +106,7 @@ name: string (nombre del personaje Main)
 ```
 
 **404 Not Found - Main no encontrado**
+
 ```json
 {
   "error": "Personaje Main no encontrado"
@@ -107,6 +114,7 @@ name: string (nombre del personaje Main)
 ```
 
 **401 Unauthorized - Credenciales inválidas**
+
 ```json
 {
   "error": "Credenciales inválidas"
@@ -119,11 +127,12 @@ name: string (nombre del personaje Main)
 
 ### GET `/alter`
 
-*Endpoint no implementado (stub).*
+_Endpoint no implementado (stub)._
 
 #### Response
 
 **200 OK**
+
 ```json
 {
   "message": "getAlters"
@@ -134,11 +143,12 @@ name: string (nombre del personaje Main)
 
 ### POST `/alter`
 
-*Endpoint no implementado (stub).*
+_Endpoint no implementado (stub)._
 
 #### Response
 
 **200 OK**
+
 ```json
 {
   "message": "postAlters"
@@ -154,11 +164,13 @@ Elimina un personaje Alter.
 #### Request
 
 **URL Params:**
+
 ```
 name: string (nombre del Alter)
 ```
 
 **Body:**
+
 ```json
 {
   "user": "lunatik",
@@ -169,6 +181,7 @@ name: string (nombre del Alter)
 #### Response
 
 **200 OK - Éxito**
+
 ```json
 {
   "message": "Alter NombreAlter eliminado"
@@ -176,6 +189,7 @@ name: string (nombre del Alter)
 ```
 
 **404 Not Found - Alter no encontrado**
+
 ```json
 {
   "error": "Alter no encontrado"
@@ -183,6 +197,7 @@ name: string (nombre del Alter)
 ```
 
 **401 Unauthorized - Credenciales inválidas**
+
 ```json
 {
   "error": "Credenciales inválidas"
@@ -200,11 +215,13 @@ Procesa datos DKP (Dragon Kill Points) desde un archivo XML exportado de QDKP2 (
 #### Request
 
 **Headers:**
+
 ```
 Content-Type: application/json
 ```
 
 **Body:**
+
 ```json
 {
   "body": "<XML_STRING>",
@@ -216,6 +233,7 @@ Content-Type: application/json
 El `body` debe ser un string conteniendo un XML con el formato QDKP2EXPORT-DKP.
 
 **Formato 1 - Atributos XML (más común en QDKP2):**
+
 ```xml
 <QDKP2EXPORT-DKP list="guild" time="1777764401" guild="Lunatik" exporter="Drankg">
   <PLAYER name="Maicolmb" class="Hunter" rank="New Moon" net="0" total="0" spent="0" hours="0" />
@@ -225,6 +243,7 @@ El `body` debe ser un string conteniendo un XML con el formato QDKP2EXPORT-DKP.
 ```
 
 **Formato 2 - Elementos hijos:**
+
 ```xml
 <QDKP2EXPORT-DKP>
   <PLAYER>
@@ -256,6 +275,7 @@ Ambos formatos son soportados gracias a `mergeAttrs: true` en el parser xml2js.
 #### Response
 
 **200 OK - Éxito**
+
 ```json
 {
   "message": "Datos procesados correctamente"
@@ -263,16 +283,19 @@ Ambos formatos son soportados gracias a `mergeAttrs: true` en el parser xml2js.
 ```
 
 **400 Bad Request - XML inválido**
+
 ```json
 {
   "error": "XML inválido: falta QDKP2EXPORT-DKP"
 }
 ```
+
 ```json
 {
   "error": "XML inválido: falta PLAYER"
 }
 ```
+
 ```json
 {
   "error": "Invalid XML"
@@ -280,6 +303,7 @@ Ambos formatos son soportados gracias a `mergeAttrs: true` en el parser xml2js.
 ```
 
 **400 Bad Request - Clase inválida**
+
 ```json
 {
   "error": "Clase inválida: {nombreClase} en personaje {nombrePersonaje}. Clases válidas: Warlock, Death Knight, Hunter, Shaman, Druid, Warrior, Mage, Paladin, Rogue, Priest"
@@ -287,6 +311,7 @@ Ambos formatos son soportados gracias a `mergeAttrs: true` en el parser xml2js.
 ```
 
 **401 Unauthorized - Credenciales inválidas**
+
 ```json
 {
   "error": "Credenciales inválidas"
@@ -294,6 +319,7 @@ Ambos formatos son soportados gracias a `mergeAttrs: true` en el parser xml2js.
 ```
 
 **500 Internal Server Error - Error de base de datos**
+
 ```json
 {
   "error": "Database error"
@@ -348,11 +374,13 @@ Autenticación de administrador.
 #### Request
 
 **Headers:**
+
 ```
 Content-Type: application/json
 ```
 
 **Body:**
+
 ```json
 {
   "user": "lunatik",
@@ -363,6 +391,7 @@ Content-Type: application/json
 #### Response
 
 **200 OK - Éxito**
+
 ```json
 {
   "response": true
@@ -370,6 +399,7 @@ Content-Type: application/json
 ```
 
 **401 Unauthorized - Credenciales inválidas**
+
 ```json
 {
   "error": "Usuario no Encontrado"
@@ -390,11 +420,13 @@ Cambia la contraseña de un administrador usando un token de recuperacion.
 #### Request
 
 **Headers:**
+
 ```
 Content-Type: application/json
 ```
 
 **Body:**
+
 ```json
 {
   "email": "admin@example.com",
@@ -406,6 +438,7 @@ Content-Type: application/json
 #### Response
 
 **200 OK - Éxito**
+
 ```json
 {
   "message": "Contrasena actualizada correctamente"
@@ -413,11 +446,13 @@ Content-Type: application/json
 ```
 
 **400 Bad Request - Token invalido o expirado**
+
 ```json
 {
   "error": "Token invalido"
 }
 ```
+
 ```json
 {
   "error": "Token expirado"
@@ -425,6 +460,7 @@ Content-Type: application/json
 ```
 
 **404 Not Found - Usuario no encontrado**
+
 ```json
 {
   "error": "Usuario no encontrado"
@@ -440,11 +476,13 @@ Envía un token de 6 dígitos al email del administrador para recuperar su contr
 #### Request
 
 **Headers:**
+
 ```
 Content-Type: application/json
 ```
 
 **Body:**
+
 ```json
 {
   "email": "admin@example.com"
@@ -454,6 +492,7 @@ Content-Type: application/json
 #### Response
 
 **200 OK - Éxito**
+
 ```json
 {
   "message": "Si el email existe, se enviara un token"
@@ -479,6 +518,7 @@ Lista todos los administradores.
 #### Request
 
 **Body:**
+
 ```json
 {
   "user": "Lunatik",
@@ -489,6 +529,7 @@ Lista todos los administradores.
 #### Response
 
 **200 OK**
+
 ```json
 [
   {
@@ -499,6 +540,7 @@ Lista todos los administradores.
 ```
 
 **403 Forbidden**
+
 ```json
 {
   "error": "Solo Lunatik puede realizar esta accion"
@@ -514,6 +556,7 @@ Crea un nuevo administrador.
 #### Request
 
 **Body:**
+
 ```json
 {
   "user": "Lunatik",
@@ -527,6 +570,7 @@ Crea un nuevo administrador.
 #### Response
 
 **201 Created**
+
 ```json
 {
   "username": "nuevoAdmin",
@@ -535,6 +579,7 @@ Crea un nuevo administrador.
 ```
 
 **400 Bad Request - Faltan campos requeridos**
+
 ```json
 {
   "error": "Username y password son requeridos"
@@ -542,6 +587,7 @@ Crea un nuevo administrador.
 ```
 
 **400 Bad Request - Usuario ya existe**
+
 ```json
 {
   "error": "El usuario ya existe"
@@ -557,6 +603,7 @@ Actualiza un administrador.
 #### Request
 
 **Body:**
+
 ```json
 {
   "user": "Lunatik",
@@ -569,6 +616,7 @@ Actualiza un administrador.
 #### Response
 
 **200 OK**
+
 ```json
 {
   "message": "Usuario actualizado correctamente"
@@ -576,6 +624,7 @@ Actualiza un administrador.
 ```
 
 **404 Not Found**
+
 ```json
 {
   "error": "Usuario no encontrado"
@@ -591,6 +640,7 @@ Elimina un administrador.
 #### Request
 
 **Body:**
+
 ```json
 {
   "user": "Lunatik",
@@ -601,6 +651,7 @@ Elimina un administrador.
 #### Response
 
 **200 OK**
+
 ```json
 {
   "message": "Usuario nuevoAdmin eliminado"
@@ -608,6 +659,7 @@ Elimina un administrador.
 ```
 
 **400 Bad Request - No se puede eliminar a Lunatik**
+
 ```json
 {
   "error": "No se puede eliminar al usuario Lunatik"
@@ -615,9 +667,56 @@ Elimina un administrador.
 ```
 
 **404 Not Found**
+
 ```json
 {
   "error": "Usuario no encontrado"
+}
+```
+
+---
+
+### POST `/admin/db-usage`
+
+Obtiene el uso actual de la base de datos (espacio ocupado). Solo disponible para el usuario **Lunatik**.
+
+#### Request
+
+**Body:**
+
+```json
+{
+  "user": "Lunatik",
+  "password": "Lunatik321"
+}
+```
+
+#### Response
+
+**200 OK**
+
+```json
+{
+  "size_bytes": 1234567,
+  "size_mb": "1.18 MB",
+  "limit_mb": 500,
+  "usage_percentage": "0.24%"
+}
+```
+
+**401 Unauthorized**
+
+```json
+{
+  "error": "Credenciales inválidas"
+}
+```
+
+**403 Forbidden**
+
+```json
+{
+  "error": "Solo Lunatik puede realizar esta accion"
 }
 ```
 
@@ -632,6 +731,7 @@ Obtiene los personajes Main actuales ordenados por `net` de mayor a menor.
 #### Response
 
 **200 OK**
+
 ```json
 [
   {
@@ -656,6 +756,7 @@ Obtiene el primer respaldo (FirstBackUp) de los personajes Main, ordenado por `n
 #### Response
 
 **200 OK**
+
 ```json
 [
   {
@@ -687,6 +788,7 @@ Obtiene el segundo respaldo (SecondBackUp) de los personajes Main, ordenado por 
 #### Response
 
 **200 OK**
+
 ```json
 [
   {
@@ -710,6 +812,149 @@ Obtiene el segundo respaldo (SecondBackUp) de los personajes Main, ordenado por 
 
 ---
 
+## Logs
+
+### POST `/logs/upload`
+
+Sube un resumen de combate procesado por el frontend. Requiere autenticación.
+
+#### Request
+
+**Headers:**
+
+```
+Content-Type: application/json
+```
+
+**Body:**
+
+```json
+{
+  "user": "lunatik",
+  "password": "password123",
+  "logInfo": {
+    "originalSize": 302000000,
+    "date": "2026-05-06T14:30:00Z"
+  },
+  "fights": [
+    {
+      "boss": "Sindragosa",
+      "result": "kill",
+      "durationMs": 382000,
+      "deaths": [],
+      "consumables": {},
+      "players": [
+        {
+          "name": "Tuskal",
+          "characterClass": "Mage",
+          "damage": 5234234,
+          "healing": 0,
+          "dps": 12432.5,
+          "hps": 0,
+          "deathsCount": 0
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### Response
+
+**201 Created**
+
+```json
+{
+  "id": "550e8400-e29b-41d4-a716-446655440000",
+  "message": "Log procesado correctamente"
+}
+```
+
+---
+
+### GET `/logs`
+
+Lista todos los logs subidos ordenados por fecha descendente.
+
+#### Response
+
+**200 OK**
+
+```json
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "originalSize": 302000000,
+    "uploadedBy": "lunatik",
+    "date": "2026-05-06T14:30:00.000Z"
+  }
+]
+```
+
+---
+
+### GET `/logs/:id`
+
+Obtiene el detalle de un log y la lista de sus peleas.
+
+#### Response
+
+**200 OK**
+
+```json
+{
+  "id": "550e8400-e29b-41d4-a716-446655440000",
+  "originalSize": 302000000,
+  "uploadedBy": "lunatik",
+  "date": "2026-05-06T14:30:00.000Z",
+  "fights": [
+    {
+      "id": 1,
+      "boss": "Sindragosa",
+      "result": "kill",
+      "durationMs": 382000
+    }
+  ]
+}
+```
+
+---
+
+### GET `/logs/fight/:fightId`
+
+Obtiene el detalle completo de una pelea específica, incluyendo estadísticas de todos los jugadores.
+
+#### Response
+
+**200 OK**
+
+```json
+{
+  "id": 1,
+  "boss": "Sindragosa",
+  "result": "kill",
+  "durationMs": 382000,
+  "deaths": [],
+  "consumables": {},
+  "logId": "550e8400-e29b-41d4-a716-446655440000",
+  "fight_players": [
+    {
+      "id": 1,
+      "name": "Tuskal",
+      "characterClass": "Mage",
+      "damage": "5234234",
+      "healing": "0",
+      "dps": 12432.5,
+      "hps": 0,
+      "deathsCount": 0,
+      "fightId": 1
+    }
+  ]
+}
+```
+
+---
+
 ## Monitor
 
 ### GET `/monitor`
@@ -719,6 +964,7 @@ Endpoint de salud del servidor.
 #### Response
 
 **200 OK**
+
 ```json
 {
   "success": "ok"
@@ -736,6 +982,7 @@ Endpoint de salud del servidor (ruta base).
 #### Response
 
 **200 OK**
+
 ```json
 {
   "message": "Home alive"

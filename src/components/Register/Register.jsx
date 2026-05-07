@@ -1,9 +1,9 @@
 import { useState } from 'react'
 // import { API } from '../../views/Home/DkpsTable/DkpsTable.service'
 import './Register.css'
-import { useNavigate } from 'react-router'
+// import { useNavigate } from 'react-router'
 // import { objectPost } from '../../helpers/objetPost'
-import { useDispatch } from 'react-redux'
+// import { useDispatch } from 'react-redux'
 import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa'
 // import { registerUser } from '../../redux/actions/actionsregister'
 
@@ -16,8 +16,8 @@ const Register = ({ _setShowAddDkp }) => {
     user: '',
     password: ''
   })
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
+  // const navigate = useNavigate()
+  // const dispatch = useDispatch()
 
   const onSubmitForm = async (e) => {
     e.preventDefault()

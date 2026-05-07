@@ -1,0 +1,25 @@
+.upload-log-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.fights-preview-list::-webkit-scrollbar,
+.players-preview-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.fights-preview-list::-webkit-scrollbar-track,
+.players-preview-list::-webkit-scrollbar-track {
+  background: #010409;
+}
+
+.fights-preview-list::-webkit-scrollbar-thumb,
+.players-preview-list::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+.fights-preview-list::-webkit-scrollbar-thumb:hover,
+.players-preview-list::-webkit-scrollbar-thumb:hover {
+  background: #A855F7;
+}

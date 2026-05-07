@@ -55,6 +55,13 @@ const NavBar = () => {
             HOME
           </Link>
           <Link
+            to='/logs'
+            onClick={scrollToTop}
+            className='text-sm font-medium leading-normal text-white/80 hover:text-white'
+          >
+            COMBAT LOGS
+          </Link>
+          <Link
             to='/loottable'
             onClick={scrollToTop}
             className='text-sm font-medium leading-normal text-white/80 hover:text-white'
@@ -127,6 +134,17 @@ const NavBar = () => {
               className='text-sm font-medium leading-normal text-white/80 hover:text-white py-2'
             >
               HOME
+            </Link>
+
+            <Link
+              to='/logs'
+              onClick={() => {
+                closeMenu()
+                scrollToTop()
+              }}
+              className='text-sm font-medium leading-normal text-white/80 hover:text-white py-2'
+            >
+              COMBAT LOGS
             </Link>
 
             <Link
