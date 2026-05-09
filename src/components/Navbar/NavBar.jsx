@@ -54,13 +54,13 @@ const NavBar = () => {
           >
             HOME
           </Link>
-          <Link
+          {/* <Link
             to='/logs'
             onClick={scrollToTop}
             className='text-sm font-medium leading-normal text-white/80 hover:text-white'
           >
             COMBAT LOGS
-          </Link>
+          </Link> */}
           <Link
             to='/loottable'
             onClick={scrollToTop}
