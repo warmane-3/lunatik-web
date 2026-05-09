@@ -8,7 +8,7 @@ const Footer = memo(() => {
         <p className='text-sm text-white/60'>
           © 2024 &lt;Lunatik&gt; Guild. All rights reserved.
         </p>
-        <a className='text-sm text-white underline flex' target='_blank' href='https://marteldev.com/'>
+        <a className='text-sm text-white underline flex' target='_blank' href='https://marteldev.vercel.app/'>
           <GiGrimReaper size={20} /> By Terry <GiGrimReaper size={20} />
         </a>
         <div className='flex items-center gap-4'>
